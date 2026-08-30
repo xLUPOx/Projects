@@ -119,6 +119,10 @@ def _try_embeddings(texts: list[str]) -> list[list[float]] | None:
 
     for key in pool:
         try:
+            # Il client va tenuto in una variabile: scritto in catena
+            # (`genai.Client(...).models.embed_content(...)`) viene raccolto dal
+            # garbage collector mentre la chiamata e' in corso e la richiesta
+            # muore con "the client has been closed", su qualunque chiave.
             client = genai.Client(api_key=key)
             response = client.models.embed_content(model=EMBEDDING_MODEL, contents=texts)
             return [list(e.values) for e in response.embeddings]
