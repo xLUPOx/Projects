@@ -1,7 +1,7 @@
 # Progetto
 un assistente del catasto del verde. Domanda in italiano → l'agente sceglie fra cinque tool → 
 risponde citando le fonti → la mappa accende gli alberi citati. Due metà: `backend/` è il ciclo 
-dell'agente, `frontend-verde/src/app/` è il prodotto.
+dell'agente, `frontend/src/app/` è il prodotto.
 Ogni voce chiude col verdetto — **la
 rifarei** in produzione, oppure **è da MVP** e allora cosa cambierei.
 
@@ -48,27 +48,27 @@ rifarei** in produzione, oppure **è da MVP** e allora cosa cambierei.
   **Qui sono onesto: non è una scelta tecnica, è una scelta di contesto.**
   React sarebbe stato più veloce a parità di risultato; Angular è il primo dei
   vostri "preferred", e scriverlo vale più del dichiararlo.
-- **[state.ts](frontend-verde/src/app/state.ts)** — signals condivisi fra chat
+- **[state.ts](frontend/src/app/state.ts)** — signals condivisi fra chat
   e mappa. *E non NgRx:* lo stato è una manciata di segnali e la reattività
   granulare la dà già il framework. **La rifarei a questa dimensione;** uno
   store con più feature che scrivono lo stesso stato, o dovendo tracciare chi
   l'ha cambiato.
-- **[api.ts](frontend-verde/src/app/api.ts)** — lettura dello stream a mano.
+- **[api.ts](frontend/src/app/api.ts)** — lettura dello stream a mano.
   *E non `EventSource`,* che non fa POST. *E nemmeno una libreria SSE:* provata
   e tolta, perché le sue due funzioni utili — riconnessione e chiusura a scheda
   nascosta — qui vanno spente (riconnettersi rifà la POST, cioè riesegue
   l'agente), e senza quelle resta il parsing di un formato che il mio server
   emette in una forma sola. **La rifarei a mano:** è l'unico punto del progetto
   dove ho preso una libreria e poi l'ho restituita.
-- **[map.ts](frontend-verde/src/app/map.ts)** — Leaflet diretto, senza wrapper.
+- **[map.ts](frontend/src/app/map.ts)** — Leaflet diretto, senza wrapper.
   **La rifarei per centoquaranta punti:** zero token, zero servizio esterno, e
   il ciclo di vita lo governano gli `effect`. **Sul catasto vero cambierei:**
   decine di migliaia di alberi vogliono vector tile e MapLibre GL, non marker
   nel DOM.
-- **[chart.ts](frontend-verde/src/app/chart.ts)** — barre disegnate a mano.
+- **[chart.ts](frontend/src/app/chart.ts)** — barre disegnate a mano.
   *E non Chart.js:* una libreria porta una palette da combattere, e qui il
   colore è dato — le quattro classi di rischio. **Giusta per una forma sola:**
   alla seconda serve una libreria, non altre barre a mano.
-- **[chip.ts](frontend-verde/src/app/chip.ts)** — la targhetta cliccabile.
+- **[chip.ts](frontend/src/app/chip.ts)** — la targhetta cliccabile.
   Nessuna alternativa da scartare: è l'elemento firma. Una frase senza
   targhetta non ha fonte.

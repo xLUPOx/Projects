@@ -61,7 +61,7 @@ chatbot/
 │   ├── test_citations.py       6 test: quali fonti finiscono in interfaccia
 │   ├── test_api.py             3 test: lifespan ed endpoint di lettura
 │   └── eval/                   suite di regressione sull'agente (usa il modello)
-└── frontend-verde/             Angular 20, standalone + signals, Leaflet
+└── frontend/             Angular 20, standalone + signals, Leaflet
     └── src/app/
         ├── state.ts            signals condivisi fra chat e mappa
         ├── api.ts              client + lettura dello stream SSE

@@ -59,8 +59,8 @@ Angular 20 e non l'ultima versione: la CLI più recente richiede Node >= 22.22,
 qui Node è 22.19. Controlla con `node -v`.
 
 ```powershell
-npx @angular/cli@20 new frontend-verde --style=css --ssr=false --skip-git --package-manager=npm --defaults
-cd frontend-verde
+npx @angular/cli@20 new frontend --style=css --ssr=false --skip-git --package-manager=npm --defaults
+cd frontend
 npm install leaflet @types/leaflet
 ```
 
@@ -93,7 +93,7 @@ python -m uvicorn main:app --reload
 ### Terminale 2 — frontend
 
 ```powershell
-cd frontend-verde
+cd frontend
 npm start
 ```
 
@@ -103,7 +103,7 @@ http://localhost:4200/
 
 | Sintomo | Causa | Rimedio |
 | --- | --- | --- |
-| `npm start` → `Missing script: start` | lanciato dalla cartella sbagliata | `cd frontend-verde` prima |
+| `npm start` → `Missing script: start` | lanciato dalla cartella sbagliata | `cd frontend` prima |
 | `npm start` → `Port 4200 is already in use` | un dev server è rimasto acceso | chiudi il terminale che lo teneva |
 | La pagina dice che su 8000 risponde un'altra applicazione | un altro progetto di `intervista` occupa la porta | chiudi quel terminale, oppure avvia questo backend con `--port 8001` e apri `http://localhost:4200/?api=8001` |
 | La pagina dice che manca `GEMINI_API_KEY` | `backend\.env` assente o vuoto | crealo da `.env.example` e riavvia uvicorn |
@@ -134,7 +134,7 @@ chunking, il recupero e la soglia lessicale, non il ramo con gli embedding.
 Frontend — sette test su `segment()`, l'unico punto con logica propria:
 
 ```powershell
-cd frontend-verde
+cd frontend
 npm test
 ```
 

@@ -1,6 +1,6 @@
 # Assistente del catasto del verde — riassunto
 
-**Struttura:** `backend/` (Python) e `frontend-verde/` (Angular).
+**Struttura:** `backend/` (Python) e `frontend/` (Angular).
 
 **Caso:** R3GIS, Bolzano. Un tecnico dell'ufficio verde deve sapere quali alberi
 sono a rischio, dove sono e cosa prescrive il regolamento, senza imparare una
@@ -97,7 +97,7 @@ tollera `Art.10` e `articolo 10`, ma col confine di parola, per non pescare
 `_suggested_wait()` legge il ritardo consigliato dal 429 e distingue la quota al
 minuto, dove si aspetta, da quella giornaliera, dove aspettare è inutile.
 
-## 6. Stato condiviso — `frontend-verde/src/app/state.ts`
+## 6. Stato condiviso — `frontend/src/app/state.ts`
 
 I signals che chat e mappa scrivono entrambe: `highlighted` (gli alberi
 dell'ultima risposta), `selected`, `hovered`, `openArticle`, più `cadastre` e

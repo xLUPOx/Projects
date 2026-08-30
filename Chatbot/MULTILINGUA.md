@@ -20,7 +20,7 @@ Lo stato attuale, verificato sul codice:
 | Nome comune specie | [backend/cadastre.py](backend/cadastre.py) | `species='Linden'` → **0 alberi**, non un errore |
 | Corpus normativo | [data/regolamento_verde.md](data/regolamento_verde.md) | documento solo italiano |
 | Stopword e stemming | [backend/rag.py](backend/rag.py) | lista di stopword italiana e stemmer Snowball italiano, uno solo per tutto l'indice |
-| Riconoscimento citazioni | [backend/main.py](backend/main.py), [frontend-verde/src/app/format.ts](frontend-verde/src/app/format.ts) | riconosce `Art. N`, non `Article` / `Artikel` |
+| Riconoscimento citazioni | [backend/main.py](backend/main.py), [frontend/src/app/format.ts](frontend/src/app/format.ts) | riconosce `Art. N`, non `Article` / `Artikel` |
 | Etichette interfaccia | tutto il frontend | stringhe italiane scritte nei template |
 | Suite di valutazione | [backend/eval/cases.json](backend/eval/cases.json) | attese in italiano |
 
