@@ -1,0 +1,38 @@
+[
+ {
+  "name": "Scuola Primaria Gries",
+  "type": "scuola",
+  "lat": 46.5042,
+  "lng": 11.3292
+ },
+ {
+  "name": "Scuola Media Archimede",
+  "type": "scuola",
+  "lat": 46.49,
+  "lng": 11.3032
+ },
+ {
+  "name": "Ospedale di Bolzano",
+  "type": "ospedale",
+  "lat": 46.4872,
+  "lng": 11.3262
+ },
+ {
+  "name": "Parco Petrarca",
+  "type": "parco",
+  "lat": 46.4988,
+  "lng": 11.3558
+ },
+ {
+  "name": "Stazione di Bolzano",
+  "type": "stazione",
+  "lat": 46.4975,
+  "lng": 11.36
+ },
+ {
+  "name": "Asilo Firmian",
+  "type": "scuola",
+  "lat": 46.482,
+  "lng": 11.3705
+ }
+]

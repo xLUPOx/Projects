@@ -1,0 +1,14 @@
+# segreti
+backend/.env
+
+# ambienti e build
+venv/
+__pycache__/
+node_modules/
+dist/
+.angular/
+
+# output della suite di regressione (il nome era rimasto quello vecchio,
+# quindi il rapporto finiva tracciato: in repo ce n'era una copia con un caso
+# solo, che si leggeva come lo stato dell'intera suite)
+backend/eval/last_report.json

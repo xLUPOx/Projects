@@ -1,0 +1,29 @@
+<header class="masthead">
+  <div class="brand">
+    <span class="monogram" aria-hidden="true">V</span>
+    <div>
+      <h1>Catasto del verde</h1>
+      <p>Bolzano · assistente di consultazione</p>
+    </div>
+  </div>
+
+  <dl class="dials">
+    <div>
+      <dt class="eyebrow">Esemplari</dt>
+      <dd>{{ state.cadastre().length }}</dd>
+    </div>
+    <div>
+      <dt class="eyebrow">Selezionato</dt>
+      <dd>{{ state.selected() ?? '—' }}</dd>
+    </div>
+  </dl>
+</header>
+
+@if (state.startupError(); as error) {
+  <p class="notice" role="alert">{{ error }}</p>
+}
+
+<main>
+  <app-map />
+  <app-chat />
+</main>

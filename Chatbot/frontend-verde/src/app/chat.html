@@ -1,0 +1,145 @@
+<div class="conversation" #conversation>
+  @if (!state.messages().length) {
+    <section class="intro">
+      <p class="eyebrow">Interroga il catasto</p>
+      <h2>
+        Chiedi in italiano.<br />
+        Rispondo solo con quello che c'è nei dati.
+      </h2>
+      <p class="explainer">
+        Scrivi la domanda nella casella in basso. Ogni numero che leggi è agganciato
+        alla sua fonte: la targhetta di un albero o l'articolo del regolamento. Se il
+        dato non c'è, te lo dico.
+      </p>
+    </section>
+  }
+
+  @for (message of state.messages(); track $index) {
+    @if (message.role === 'user') {
+      <article class="question">{{ message.text }}</article>
+    } @else {
+      <article class="answer">
+        @if (message.steps.length) {
+          <ol class="steps">
+            @for (step of message.steps; track $index) {
+              <li [class.done]="step.done">
+                <span class="tick" aria-hidden="true"></span>
+                <span class="action">{{ step.label }}</span>
+                @if (readableArgs(step.args); as args) {
+                  <span class="args">{{ args }}</span>
+                }
+                <span class="result">{{ step.result ?? 'in corso…' }}</span>
+              </li>
+            }
+          </ol>
+        }
+
+        @for (line of lines(message.text); track $index) {
+          @if (line.code) {
+            <pre class="preformatted">{{ line.pieces[0].value }}</pre>
+          } @else {
+          <p [class.bullet]="line.bullet">
+            @for (piece of line.pieces; track $index) {
+              @switch (piece.kind) {
+                @case ('tree') {
+                  <app-chip [code]="piece.value" kind="tree" />
+                }
+                @case ('article') {
+                  <app-chip [code]="piece.value" kind="article" />
+                }
+                @case ('strong') {
+                  <b>{{ piece.value }}</b>
+                }
+                @case ('emphasis') {
+                  <i>{{ piece.value }}</i>
+                }
+                @default {
+                  <span>{{ piece.value }}</span>
+                }
+              }
+            }
+          </p>
+          }
+        }
+
+        @if (message.pending && !message.text) {
+          <p class="waiting" aria-live="polite">Sto componendo la risposta…</p>
+        }
+
+        @if (message.error) {
+          <p class="error" role="alert">{{ message.error }}</p>
+        }
+
+        @if (message.chart) {
+          <div class="panel">
+            <app-chart [data]="message.chart" />
+          </div>
+        }
+
+        @if (!message.pending && (message.trees.length || message.articles.length)) {
+          <footer class="sources">
+            <span class="eyebrow">Fonti</span>
+            <div class="source-list">
+              @for (article of message.articles; track article.reference) {
+                <app-chip [code]="article.reference" kind="article" />
+              }
+              @for (tree of message.trees.slice(0, 12); track tree.id) {
+                <app-chip [code]="tree.id" kind="tree" />
+              }
+              @if (message.trees.length > 12) {
+                <span class="rest">+{{ message.trees.length - 12 }} in mappa</span>
+              }
+            </div>
+          </footer>
+        }
+      </article>
+    }
+  }
+</div>
+
+@if (state.openArticle(); as article) {
+  <aside class="reader">
+    <header>
+      <span class="eyebrow">{{ article.source }}</span>
+      <button type="button" class="close" (click)="state.openArticle.set(null)">
+        Chiudi
+      </button>
+    </header>
+    <h3>{{ article.title }}</h3>
+    <p>{{ article.text }}</p>
+  </aside>
+}
+
+<nav class="shortcuts" aria-label="Domande di esempio">
+  <span class="eyebrow">Esempi</span>
+  <ul>
+    @for (prompt of prompts; track prompt.label) {
+      <li>
+        <button type="button" [title]="prompt.question" (click)="suggest(prompt.question)">
+          {{ prompt.label }}
+        </button>
+      </li>
+    }
+  </ul>
+</nav>
+
+<form class="composer" (submit)="$event.preventDefault(); send(draft())">
+  <textarea
+    #box
+    rows="2"
+    [value]="draft()"
+    (input)="draft.set($any($event.target).value)"
+    (keydown.enter)="$event.preventDefault(); send(draft())"
+    placeholder="Es. alberi a rischio elevato non ispezionati da due anni"
+    aria-label="La tua domanda"
+    [disabled]="!!state.startupError()"
+  ></textarea>
+
+  @if (state.pending()) {
+    <button type="button" class="stop" (click)="state.stop()">Interrompi</button>
+  } @else {
+    <button type="submit" class="send" [disabled]="!draft().trim() || !!state.startupError()">
+      Chiedi
+    </button>
+  }
+</form>

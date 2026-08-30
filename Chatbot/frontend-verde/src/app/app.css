@@ -1,0 +1,122 @@
+:host {
+  /* Colonna flex e non grid a righe fisse: il banner di errore c'e' solo a
+     volte, e con grid-template-rows la mappa finiva nella riga 'auto' —
+     prendendo l'altezza del contenuto della chat invece del resto della pagina. */
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.masthead,
+.notice {
+  flex: none;
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 24px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-high);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* La sigla e' punzonata come la targhetta: stessa famiglia di oggetti. */
+.monogram {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--moss);
+  border-radius: 2px;
+  background: var(--moss);
+  color: var(--paper-high);
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.masthead h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.masthead p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+
+.dials {
+  display: flex;
+  gap: 26px;
+  margin: 0;
+}
+
+.dials dd {
+  margin: 2px 0 0;
+  font-family: var(--font-data);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.notice {
+  margin: 0;
+  padding: 9px 24px;
+  border-bottom: 1px solid var(--rule);
+  background: #fbeeee;
+  font-size: 13px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr minmax(380px, 34%);
+  flex: 1;
+  min-height: 0;
+}
+
+app-map {
+  min-height: 0;
+}
+
+app-chat {
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  :host {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  app-map {
+    height: 46vh;
+  }
+
+  app-chat {
+    height: 70vh;
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .dials {
+    gap: 18px;
+  }
+}

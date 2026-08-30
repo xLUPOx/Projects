@@ -1,0 +1,3647 @@
+{
+ "type": "FeatureCollection",
+ "seed": 20260826,
+ "generated_on": "2026-08-26",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.32016,
+     46.487064
+    ]
+   },
+   "properties": {
+    "id": "ALB-0001",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 33",
+    "planting_date": "2005-03-26",
+    "height_m": 6.1,
+    "girth_cm": 237,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2026-02-14",
+    "last_pruning": "2025-03-28",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.350797,
+     46.496135
+    ]
+   },
+   "properties": {
+    "id": "ALB-0002",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 15",
+    "planting_date": "1948-11-13",
+    "height_m": 6.0,
+    "girth_cm": 309,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2025-03-10",
+    "last_pruning": "2020-11-06",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.306264,
+     46.49345
+    ]
+   },
+   "properties": {
+    "id": "ALB-0003",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Don Bosco",
+    "street": "Via Demo 47",
+    "planting_date": "1960-01-21",
+    "height_m": 15.4,
+    "girth_cm": 166,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2025-11-16",
+    "last_pruning": "2025-04-22",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.303027,
+     46.48805
+    ]
+   },
+   "properties": {
+    "id": "ALB-0004",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Don Bosco",
+    "street": "Via Demo 59",
+    "planting_date": "1976-08-31",
+    "height_m": 13.6,
+    "girth_cm": 225,
+    "risk_class": "A",
+    "health_status": "Scadente",
+    "last_inspection": "2025-07-29",
+    "last_pruning": "2023-07-19",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.327862,
+     46.484
+    ]
+   },
+   "properties": {
+    "id": "ALB-0005",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 31",
+    "planting_date": "1982-08-04",
+    "height_m": 5.8,
+    "girth_cm": 235,
+    "risk_class": "C",
+    "health_status": "Scadente",
+    "last_inspection": "2024-03-03",
+    "last_pruning": "2025-07-22",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.368927,
+     46.48371
+    ]
+   },
+   "properties": {
+    "id": "ALB-0006",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 31",
+    "planting_date": "1976-09-26",
+    "height_m": 4.0,
+    "girth_cm": 294,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2024-06-06",
+    "last_pruning": "2023-02-11",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.357318,
+     46.495713
+    ]
+   },
+   "properties": {
+    "id": "ALB-0007",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 42",
+    "planting_date": "1972-05-07",
+    "height_m": 20.2,
+    "girth_cm": 46,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2026-01-31",
+    "last_pruning": "2021-10-26",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.375085,
+     46.482834
+    ]
+   },
+   "properties": {
+    "id": "ALB-0008",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 41",
+    "planting_date": "2009-07-29",
+    "height_m": 20.7,
+    "girth_cm": 64,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2026-05-19",
+    "last_pruning": "2021-05-26",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.37381,
+     46.486143
+    ]
+   },
+   "properties": {
+    "id": "ALB-0009",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 46",
+    "planting_date": "1974-04-04",
+    "height_m": 18.6,
+    "girth_cm": 223,
+    "risk_class": "C",
+    "health_status": "Discreto",
+    "last_inspection": "2023-09-12",
+    "last_pruning": "2025-02-04",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.366614,
+     46.47696
+    ]
+   },
+   "properties": {
+    "id": "ALB-0010",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 22",
+    "planting_date": "1951-11-06",
+    "height_m": 3.5,
+    "girth_cm": 73,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2025-02-02",
+    "last_pruning": "2020-11-19",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.302997,
+     46.486176
+    ]
+   },
+   "properties": {
+    "id": "ALB-0011",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Don Bosco",
+    "street": "Via Demo 29",
+    "planting_date": "1998-02-24",
+    "height_m": 5.6,
+    "girth_cm": 264,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2026-01-03",
+    "last_pruning": "2021-08-03",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.3311,
+     46.501746
+    ]
+   },
+   "properties": {
+    "id": "ALB-0012",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 32",
+    "planting_date": "2001-06-11",
+    "height_m": 21.8,
+    "girth_cm": 137,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2026-02-21",
+    "last_pruning": "2019-09-14",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.304809,
+     46.486061
+    ]
+   },
+   "properties": {
+    "id": "ALB-0013",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Don Bosco",
+    "street": "Via Demo 8",
+    "planting_date": "1947-10-02",
+    "height_m": 3.9,
+    "girth_cm": 91,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2025-10-29",
+    "last_pruning": "2020-12-07",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.298135,
+     46.49007
+    ]
+   },
+   "properties": {
+    "id": "ALB-0014",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Don Bosco",
+    "street": "Via Demo 16",
+    "planting_date": "2010-08-29",
+    "height_m": 19.4,
+    "girth_cm": 108,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-09-09",
+    "last_pruning": "2024-09-12",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.329041,
+     46.489834
+    ]
+   },
+   "properties": {
+    "id": "ALB-0015",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 5",
+    "planting_date": "2009-08-12",
+    "height_m": 5.1,
+    "girth_cm": 209,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-11-21",
+    "last_pruning": "2025-06-24",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.326824,
+     46.502755
+    ]
+   },
+   "properties": {
+    "id": "ALB-0016",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 3",
+    "planting_date": "1983-01-13",
+    "height_m": 15.5,
+    "girth_cm": 91,
+    "risk_class": "C",
+    "health_status": "Buono",
+    "last_inspection": "2023-10-11",
+    "last_pruning": "2024-03-15",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.359358,
+     46.502807
+    ]
+   },
+   "properties": {
+    "id": "ALB-0017",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 35",
+    "planting_date": "2009-11-30",
+    "height_m": 20.7,
+    "girth_cm": 105,
+    "risk_class": "C",
+    "health_status": "Scadente",
+    "last_inspection": "2025-02-27",
+    "last_pruning": "2019-11-22",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.325015,
+     46.508201
+    ]
+   },
+   "properties": {
+    "id": "ALB-0018",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 11",
+    "planting_date": "2019-08-30",
+    "height_m": 16.4,
+    "girth_cm": 119,
+    "risk_class": "B",
+    "health_status": "Scadente",
+    "last_inspection": "2025-06-06",
+    "last_pruning": "2024-03-27",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.332274,
+     46.499925
+    ]
+   },
+   "properties": {
+    "id": "ALB-0019",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 1",
+    "planting_date": "2015-11-09",
+    "height_m": 14.0,
+    "girth_cm": 55,
+    "risk_class": "C",
+    "health_status": "Critico",
+    "last_inspection": "2024-04-08",
+    "last_pruning": "2020-12-16",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.328707,
+     46.483112
+    ]
+   },
+   "properties": {
+    "id": "ALB-0020",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 56",
+    "planting_date": "2012-03-07",
+    "height_m": 9.8,
+    "girth_cm": 188,
+    "risk_class": "C",
+    "health_status": "Buono",
+    "last_inspection": "2024-08-22",
+    "last_pruning": "2024-12-18",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.327182,
+     46.483213
+    ]
+   },
+   "properties": {
+    "id": "ALB-0021",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 37",
+    "planting_date": "1983-04-09",
+    "height_m": 7.6,
+    "girth_cm": 69,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2025-03-27",
+    "last_pruning": "2019-09-18",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.371925,
+     46.485862
+    ]
+   },
+   "properties": {
+    "id": "ALB-0022",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 51",
+    "planting_date": "2010-04-14",
+    "height_m": 22.5,
+    "girth_cm": 287,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-03-02",
+    "last_pruning": "2024-11-04",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.331007,
+     46.501189
+    ]
+   },
+   "properties": {
+    "id": "ALB-0023",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 32",
+    "planting_date": "1994-12-04",
+    "height_m": 22.1,
+    "girth_cm": 278,
+    "risk_class": "B",
+    "health_status": "Critico",
+    "last_inspection": "2025-09-03",
+    "last_pruning": "2025-02-08",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.363135,
+     46.482766
+    ]
+   },
+   "properties": {
+    "id": "ALB-0024",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 8",
+    "planting_date": "1971-06-29",
+    "height_m": 14.3,
+    "girth_cm": 202,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2025-10-28",
+    "last_pruning": "2020-10-01",
+    "pruning_interval_months": 36,
+    "protected": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.361732,
+     46.497931
+    ]
+   },
+   "properties": {
+    "id": "ALB-0025",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 28",
+    "planting_date": "1983-10-05",
+    "height_m": 6.9,
+    "girth_cm": 316,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2025-08-17",
+    "last_pruning": "2020-11-05",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.325466,
+     46.488666
+    ]
+   },
+   "properties": {
+    "id": "ALB-0026",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 40",
+    "planting_date": "1977-01-30",
+    "height_m": 20.6,
+    "girth_cm": 300,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2026-07-10",
+    "last_pruning": "2021-10-22",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.330446,
+     46.486114
+    ]
+   },
+   "properties": {
+    "id": "ALB-0027",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 23",
+    "planting_date": "2007-02-20",
+    "height_m": 23.9,
+    "girth_cm": 107,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2024-08-17",
+    "last_pruning": "2025-10-29",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.37516,
+     46.481849
+    ]
+   },
+   "properties": {
+    "id": "ALB-0028",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 36",
+    "planting_date": "1991-11-08",
+    "height_m": 5.5,
+    "girth_cm": 210,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-08-05",
+    "last_pruning": "2025-03-30",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.325157,
+     46.486136
+    ]
+   },
+   "properties": {
+    "id": "ALB-0029",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 34",
+    "planting_date": "2006-12-15",
+    "height_m": 21.9,
+    "girth_cm": 98,
+    "risk_class": "B",
+    "health_status": "Scadente",
+    "last_inspection": "2025-06-15",
+    "last_pruning": "2020-08-27",
+    "pruning_interval_months": 48,
+    "protected": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.361938,
+     46.500635
+    ]
+   },
+   "properties": {
+    "id": "ALB-0030",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 59",
+    "planting_date": "2009-01-08",
+    "height_m": 8.0,
+    "girth_cm": 92,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2024-06-14",
+    "last_pruning": "2020-05-21",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.371626,
+     46.477837
+    ]
+   },
+   "properties": {
+    "id": "ALB-0031",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 22",
+    "planting_date": "1961-04-08",
+    "height_m": 18.3,
+    "girth_cm": 279,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-09-24",
+    "last_pruning": "2019-10-30",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.306432,
+     46.494501
+    ]
+   },
+   "properties": {
+    "id": "ALB-0032",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Don Bosco",
+    "street": "Via Demo 50",
+    "planting_date": "1952-04-26",
+    "height_m": 19.5,
+    "girth_cm": 311,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2026-05-02",
+    "last_pruning": "2022-08-01",
+    "pruning_interval_months": 84,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.376968,
+     46.484953
+    ]
+   },
+   "properties": {
+    "id": "ALB-0033",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 7",
+    "planting_date": "1981-03-02",
+    "height_m": 10.2,
+    "girth_cm": 150,
+    "risk_class": "C",
+    "health_status": "Scadente",
+    "last_inspection": "2023-12-10",
+    "last_pruning": "2021-06-17",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.306926,
+     46.49301
+    ]
+   },
+   "properties": {
+    "id": "ALB-0034",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Don Bosco",
+    "street": "Via Demo 8",
+    "planting_date": "1949-07-09",
+    "height_m": 14.9,
+    "girth_cm": 62,
+    "risk_class": "C",
+    "health_status": "Discreto",
+    "last_inspection": "2022-12-20",
+    "last_pruning": "2022-09-28",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.3599,
+     46.498904
+    ]
+   },
+   "properties": {
+    "id": "ALB-0035",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 37",
+    "planting_date": "2005-03-16",
+    "height_m": 3.9,
+    "girth_cm": 114,
+    "risk_class": "A",
+    "health_status": "Scadente",
+    "last_inspection": "2024-08-04",
+    "last_pruning": "2020-05-25",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.306332,
+     46.487123
+    ]
+   },
+   "properties": {
+    "id": "ALB-0036",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Don Bosco",
+    "street": "Via Demo 35",
+    "planting_date": "1978-11-02",
+    "height_m": 8.2,
+    "girth_cm": 149,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2024-10-24",
+    "last_pruning": "2025-06-13",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.370126,
+     46.479115
+    ]
+   },
+   "properties": {
+    "id": "ALB-0037",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 11",
+    "planting_date": "1962-03-25",
+    "height_m": 4.9,
+    "girth_cm": 308,
+    "risk_class": "A",
+    "health_status": "Scadente",
+    "last_inspection": "2024-04-15",
+    "last_pruning": "2022-05-23",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.29654,
+     46.487185
+    ]
+   },
+   "properties": {
+    "id": "ALB-0038",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Don Bosco",
+    "street": "Via Demo 44",
+    "planting_date": "1949-11-20",
+    "height_m": 13.0,
+    "girth_cm": 242,
+    "risk_class": "A",
+    "health_status": "Scadente",
+    "last_inspection": "2026-07-07",
+    "last_pruning": "2021-01-13",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.33139,
+     46.507854
+    ]
+   },
+   "properties": {
+    "id": "ALB-0039",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 7",
+    "planting_date": "1955-04-15",
+    "height_m": 6.7,
+    "girth_cm": 280,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-03-08",
+    "last_pruning": "2025-11-16",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.363494,
+     46.486791
+    ]
+   },
+   "properties": {
+    "id": "ALB-0040",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 39",
+    "planting_date": "1977-03-13",
+    "height_m": 5.6,
+    "girth_cm": 253,
+    "risk_class": "D",
+    "health_status": "Discreto",
+    "last_inspection": "2026-02-25",
+    "last_pruning": "2021-06-27",
+    "pruning_interval_months": 84,
+    "protected": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.351295,
+     46.494053
+    ]
+   },
+   "properties": {
+    "id": "ALB-0041",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 30",
+    "planting_date": "1999-10-23",
+    "height_m": 21.9,
+    "girth_cm": 312,
+    "risk_class": "B",
+    "health_status": "Critico",
+    "last_inspection": "2026-04-12",
+    "last_pruning": "2026-01-27",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.295652,
+     46.494031
+    ]
+   },
+   "properties": {
+    "id": "ALB-0042",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Don Bosco",
+    "street": "Via Demo 55",
+    "planting_date": "1964-07-16",
+    "height_m": 6.6,
+    "girth_cm": 227,
+    "risk_class": "C",
+    "health_status": "Scadente",
+    "last_inspection": "2024-12-07",
+    "last_pruning": "2024-06-08",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.325948,
+     46.504099
+    ]
+   },
+   "properties": {
+    "id": "ALB-0043",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 41",
+    "planting_date": "1947-12-09",
+    "height_m": 12.4,
+    "girth_cm": 257,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2025-04-29",
+    "last_pruning": "2024-02-21",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.333545,
+     46.50727
+    ]
+   },
+   "properties": {
+    "id": "ALB-0044",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 51",
+    "planting_date": "1957-09-23",
+    "height_m": 4.2,
+    "girth_cm": 203,
+    "risk_class": "D",
+    "health_status": "Discreto",
+    "last_inspection": "2023-10-24",
+    "last_pruning": "2024-11-23",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.357423,
+     46.494001
+    ]
+   },
+   "properties": {
+    "id": "ALB-0045",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 55",
+    "planting_date": "1971-07-03",
+    "height_m": 18.3,
+    "girth_cm": 231,
+    "risk_class": "C",
+    "health_status": "Discreto",
+    "last_inspection": "2025-12-20",
+    "last_pruning": "2023-07-29",
+    "pruning_interval_months": 48,
+    "protected": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.324932,
+     46.505434
+    ]
+   },
+   "properties": {
+    "id": "ALB-0046",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 16",
+    "planting_date": "1957-03-07",
+    "height_m": 4.9,
+    "girth_cm": 275,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2024-12-25",
+    "last_pruning": "2024-05-26",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.372828,
+     46.485539
+    ]
+   },
+   "properties": {
+    "id": "ALB-0047",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 54",
+    "planting_date": "1973-10-03",
+    "height_m": 13.5,
+    "girth_cm": 179,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2024-10-15",
+    "last_pruning": "2024-09-25",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.328612,
+     46.504119
+    ]
+   },
+   "properties": {
+    "id": "ALB-0048",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 54",
+    "planting_date": "1977-02-24",
+    "height_m": 6.5,
+    "girth_cm": 157,
+    "risk_class": "C",
+    "health_status": "Scadente",
+    "last_inspection": "2024-03-23",
+    "last_pruning": "2025-08-04",
+    "pruning_interval_months": 84,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.330968,
+     46.485558
+    ]
+   },
+   "properties": {
+    "id": "ALB-0049",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 3",
+    "planting_date": "1950-05-20",
+    "height_m": 19.5,
+    "girth_cm": 119,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2024-05-21",
+    "last_pruning": "2022-11-22",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.320789,
+     46.487348
+    ]
+   },
+   "properties": {
+    "id": "ALB-0050",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 33",
+    "planting_date": "1965-02-22",
+    "height_m": 5.0,
+    "girth_cm": 62,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2026-04-13",
+    "last_pruning": "2024-02-18",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.367051,
+     46.479407
+    ]
+   },
+   "properties": {
+    "id": "ALB-0051",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 6",
+    "planting_date": "1974-04-24",
+    "height_m": 5.1,
+    "girth_cm": 281,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2026-03-29",
+    "last_pruning": "2025-02-03",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.303418,
+     46.487786
+    ]
+   },
+   "properties": {
+    "id": "ALB-0052",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Don Bosco",
+    "street": "Via Demo 25",
+    "planting_date": "2012-08-10",
+    "height_m": 19.8,
+    "girth_cm": 189,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2024-07-28",
+    "last_pruning": "2025-03-08",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.325616,
+     46.487614
+    ]
+   },
+   "properties": {
+    "id": "ALB-0053",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 10",
+    "planting_date": "1947-08-01",
+    "height_m": 6.3,
+    "girth_cm": 194,
+    "risk_class": "B",
+    "health_status": "Critico",
+    "last_inspection": "2024-07-30",
+    "last_pruning": "2020-08-05",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.33393,
+     46.506945
+    ]
+   },
+   "properties": {
+    "id": "ALB-0054",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 31",
+    "planting_date": "1968-11-10",
+    "height_m": 12.4,
+    "girth_cm": 54,
+    "risk_class": "C",
+    "health_status": "Discreto",
+    "last_inspection": "2023-11-13",
+    "last_pruning": "2020-01-06",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.375606,
+     46.477394
+    ]
+   },
+   "properties": {
+    "id": "ALB-0055",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 53",
+    "planting_date": "1995-09-15",
+    "height_m": 4.4,
+    "girth_cm": 281,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-07-01",
+    "last_pruning": "2022-10-27",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.357101,
+     46.500879
+    ]
+   },
+   "properties": {
+    "id": "ALB-0056",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 10",
+    "planting_date": "1966-03-08",
+    "height_m": 21.7,
+    "girth_cm": 70,
+    "risk_class": "A",
+    "health_status": "Scadente",
+    "last_inspection": "2026-03-15",
+    "last_pruning": "2026-04-02",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.3346,
+     46.505103
+    ]
+   },
+   "properties": {
+    "id": "ALB-0057",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 6",
+    "planting_date": "2014-04-17",
+    "height_m": 18.2,
+    "girth_cm": 155,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2025-09-02",
+    "last_pruning": "2019-11-15",
+    "pruning_interval_months": 84,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.321882,
+     46.489218
+    ]
+   },
+   "properties": {
+    "id": "ALB-0058",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 1",
+    "planting_date": "1948-09-02",
+    "height_m": 3.5,
+    "girth_cm": 55,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2025-09-09",
+    "last_pruning": "2021-08-26",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.321236,
+     46.484911
+    ]
+   },
+   "properties": {
+    "id": "ALB-0059",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 42",
+    "planting_date": "1974-08-04",
+    "height_m": 7.5,
+    "girth_cm": 131,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2025-07-31",
+    "last_pruning": "2020-01-21",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.330351,
+     46.486601
+    ]
+   },
+   "properties": {
+    "id": "ALB-0060",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 10",
+    "planting_date": "1969-12-20",
+    "height_m": 6.9,
+    "girth_cm": 299,
+    "risk_class": "B",
+    "health_status": "Scadente",
+    "last_inspection": "2026-01-15",
+    "last_pruning": "2020-11-13",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.370998,
+     46.479441
+    ]
+   },
+   "properties": {
+    "id": "ALB-0061",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 12",
+    "planting_date": "1994-10-15",
+    "height_m": 11.0,
+    "girth_cm": 271,
+    "risk_class": "D",
+    "health_status": "Buono",
+    "last_inspection": "2024-12-31",
+    "last_pruning": "2023-01-28",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.371203,
+     46.480569
+    ]
+   },
+   "properties": {
+    "id": "ALB-0062",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 56",
+    "planting_date": "1972-01-05",
+    "height_m": 5.1,
+    "girth_cm": 121,
+    "risk_class": "C",
+    "health_status": "Discreto",
+    "last_inspection": "2023-08-19",
+    "last_pruning": "2024-08-30",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.356978,
+     46.499872
+    ]
+   },
+   "properties": {
+    "id": "ALB-0063",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 28",
+    "planting_date": "2003-06-14",
+    "height_m": 22.9,
+    "girth_cm": 146,
+    "risk_class": "C",
+    "health_status": "Scadente",
+    "last_inspection": "2025-09-09",
+    "last_pruning": "2023-07-20",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.370282,
+     46.478853
+    ]
+   },
+   "properties": {
+    "id": "ALB-0064",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 48",
+    "planting_date": "2016-04-30",
+    "height_m": 15.6,
+    "girth_cm": 72,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2026-05-20",
+    "last_pruning": "2020-03-03",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.331127,
+     46.483569
+    ]
+   },
+   "properties": {
+    "id": "ALB-0065",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 34",
+    "planting_date": "1980-09-21",
+    "height_m": 23.9,
+    "girth_cm": 309,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2026-06-23",
+    "last_pruning": "2022-12-31",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.295567,
+     46.491519
+    ]
+   },
+   "properties": {
+    "id": "ALB-0066",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Don Bosco",
+    "street": "Via Demo 57",
+    "planting_date": "1979-12-21",
+    "height_m": 13.3,
+    "girth_cm": 306,
+    "risk_class": "D",
+    "health_status": "Discreto",
+    "last_inspection": "2024-04-12",
+    "last_pruning": "2022-08-13",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.351951,
+     46.501236
+    ]
+   },
+   "properties": {
+    "id": "ALB-0067",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 10",
+    "planting_date": "1976-02-27",
+    "height_m": 18.6,
+    "girth_cm": 298,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-06-02",
+    "last_pruning": "2024-11-20",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.329964,
+     46.502003
+    ]
+   },
+   "properties": {
+    "id": "ALB-0068",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 56",
+    "planting_date": "1971-06-23",
+    "height_m": 11.8,
+    "girth_cm": 257,
+    "risk_class": "C",
+    "health_status": "Discreto",
+    "last_inspection": "2023-09-11",
+    "last_pruning": "2020-04-11",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.35581,
+     46.500631
+    ]
+   },
+   "properties": {
+    "id": "ALB-0069",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 8",
+    "planting_date": "1994-02-13",
+    "height_m": 21.8,
+    "girth_cm": 271,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2025-07-11",
+    "last_pruning": "2024-08-16",
+    "pruning_interval_months": 84,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.30918,
+     46.485434
+    ]
+   },
+   "properties": {
+    "id": "ALB-0070",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Don Bosco",
+    "street": "Via Demo 30",
+    "planting_date": "2008-03-04",
+    "height_m": 12.7,
+    "girth_cm": 313,
+    "risk_class": "D",
+    "health_status": "Buono",
+    "last_inspection": "2025-07-21",
+    "last_pruning": "2026-02-24",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.365585,
+     46.477316
+    ]
+   },
+   "properties": {
+    "id": "ALB-0071",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 10",
+    "planting_date": "1960-09-10",
+    "height_m": 20.3,
+    "girth_cm": 181,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2026-02-02",
+    "last_pruning": "2021-09-12",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.331534,
+     46.505379
+    ]
+   },
+   "properties": {
+    "id": "ALB-0072",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 28",
+    "planting_date": "2016-03-22",
+    "height_m": 13.2,
+    "girth_cm": 96,
+    "risk_class": "B",
+    "health_status": "Scadente",
+    "last_inspection": "2026-06-19",
+    "last_pruning": "2020-08-18",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.332481,
+     46.501668
+    ]
+   },
+   "properties": {
+    "id": "ALB-0073",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 59",
+    "planting_date": "2020-01-31",
+    "height_m": 5.8,
+    "girth_cm": 173,
+    "risk_class": "B",
+    "health_status": "Scadente",
+    "last_inspection": "2024-09-22",
+    "last_pruning": "2020-04-10",
+    "pruning_interval_months": 84,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.372783,
+     46.484221
+    ]
+   },
+   "properties": {
+    "id": "ALB-0074",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 58",
+    "planting_date": "2007-06-12",
+    "height_m": 11.4,
+    "girth_cm": 75,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2025-04-18",
+    "last_pruning": "2020-06-07",
+    "pruning_interval_months": 84,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.350747,
+     46.494973
+    ]
+   },
+   "properties": {
+    "id": "ALB-0075",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 25",
+    "planting_date": "1965-08-08",
+    "height_m": 12.9,
+    "girth_cm": 278,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2025-12-11",
+    "last_pruning": "2025-12-01",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.300636,
+     46.493308
+    ]
+   },
+   "properties": {
+    "id": "ALB-0076",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Don Bosco",
+    "street": "Via Demo 42",
+    "planting_date": "1960-08-04",
+    "height_m": 4.9,
+    "girth_cm": 231,
+    "risk_class": "D",
+    "health_status": "Buono",
+    "last_inspection": "2024-01-04",
+    "last_pruning": "2025-05-22",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.363018,
+     46.47895
+    ]
+   },
+   "properties": {
+    "id": "ALB-0077",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 35",
+    "planting_date": "1961-10-02",
+    "height_m": 17.5,
+    "girth_cm": 102,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-07-13",
+    "last_pruning": "2025-07-20",
+    "pruning_interval_months": 84,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.327791,
+     46.486074
+    ]
+   },
+   "properties": {
+    "id": "ALB-0078",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 59",
+    "planting_date": "1970-10-12",
+    "height_m": 19.5,
+    "girth_cm": 125,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-11-06",
+    "last_pruning": "2022-05-20",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.32649,
+     46.504662
+    ]
+   },
+   "properties": {
+    "id": "ALB-0079",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 58",
+    "planting_date": "2002-05-16",
+    "height_m": 21.7,
+    "girth_cm": 160,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2024-07-08",
+    "last_pruning": "2019-11-25",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.37412,
+     46.480835
+    ]
+   },
+   "properties": {
+    "id": "ALB-0080",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 29",
+    "planting_date": "1947-03-10",
+    "height_m": 9.9,
+    "girth_cm": 197,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-07-09",
+    "last_pruning": "2024-12-13",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.326687,
+     46.490979
+    ]
+   },
+   "properties": {
+    "id": "ALB-0081",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 33",
+    "planting_date": "2014-05-21",
+    "height_m": 20.7,
+    "girth_cm": 101,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-09-20",
+    "last_pruning": "2025-03-08",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.359748,
+     46.499887
+    ]
+   },
+   "properties": {
+    "id": "ALB-0082",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 11",
+    "planting_date": "1965-01-03",
+    "height_m": 15.9,
+    "girth_cm": 61,
+    "risk_class": "A",
+    "health_status": "Scadente",
+    "last_inspection": "2024-06-27",
+    "last_pruning": "2020-03-05",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.329865,
+     46.489485
+    ]
+   },
+   "properties": {
+    "id": "ALB-0083",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 14",
+    "planting_date": "1996-12-09",
+    "height_m": 15.7,
+    "girth_cm": 78,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-06-11",
+    "last_pruning": "2023-04-05",
+    "pruning_interval_months": 84,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.30086,
+     46.492385
+    ]
+   },
+   "properties": {
+    "id": "ALB-0084",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Don Bosco",
+    "street": "Via Demo 8",
+    "planting_date": "1972-09-01",
+    "height_m": 4.5,
+    "girth_cm": 154,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2025-07-20",
+    "last_pruning": "2026-05-27",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.335471,
+     46.50389
+    ]
+   },
+   "properties": {
+    "id": "ALB-0085",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 46",
+    "planting_date": "2006-07-17",
+    "height_m": 5.9,
+    "girth_cm": 133,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2024-03-10",
+    "last_pruning": "2022-07-30",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.301102,
+     46.493464
+    ]
+   },
+   "properties": {
+    "id": "ALB-0086",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Don Bosco",
+    "street": "Via Demo 44",
+    "planting_date": "1983-06-03",
+    "height_m": 11.4,
+    "girth_cm": 163,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2025-07-17",
+    "last_pruning": "2020-12-28",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.298682,
+     46.48882
+    ]
+   },
+   "properties": {
+    "id": "ALB-0087",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Don Bosco",
+    "street": "Via Demo 52",
+    "planting_date": "2011-06-21",
+    "height_m": 16.9,
+    "girth_cm": 281,
+    "risk_class": "C",
+    "health_status": "Buono",
+    "last_inspection": "2024-08-07",
+    "last_pruning": "2023-09-14",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.326951,
+     46.487508
+    ]
+   },
+   "properties": {
+    "id": "ALB-0088",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 43",
+    "planting_date": "2004-11-23",
+    "height_m": 17.8,
+    "girth_cm": 280,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2026-06-05",
+    "last_pruning": "2022-11-04",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.361321,
+     46.502429
+    ]
+   },
+   "properties": {
+    "id": "ALB-0089",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 4",
+    "planting_date": "1962-09-14",
+    "height_m": 4.7,
+    "girth_cm": 100,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-08-06",
+    "last_pruning": "2022-10-25",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.328164,
+     46.484312
+    ]
+   },
+   "properties": {
+    "id": "ALB-0090",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 40",
+    "planting_date": "2021-01-06",
+    "height_m": 4.6,
+    "girth_cm": 52,
+    "risk_class": "A",
+    "health_status": "Scadente",
+    "last_inspection": "2024-06-27",
+    "last_pruning": "2023-02-22",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.30141,
+     46.487459
+    ]
+   },
+   "properties": {
+    "id": "ALB-0091",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Don Bosco",
+    "street": "Via Demo 49",
+    "planting_date": "1965-06-20",
+    "height_m": 23.9,
+    "girth_cm": 36,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2025-12-17",
+    "last_pruning": "2026-02-03",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.370831,
+     46.478417
+    ]
+   },
+   "properties": {
+    "id": "ALB-0092",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 8",
+    "planting_date": "1979-01-20",
+    "height_m": 7.7,
+    "girth_cm": 48,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-02-27",
+    "last_pruning": "2025-05-23",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.376497,
+     46.483723
+    ]
+   },
+   "properties": {
+    "id": "ALB-0093",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 48",
+    "planting_date": "1969-10-30",
+    "height_m": 3.9,
+    "girth_cm": 178,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2026-05-21",
+    "last_pruning": "2020-11-28",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.300343,
+     46.489144
+    ]
+   },
+   "properties": {
+    "id": "ALB-0094",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Don Bosco",
+    "street": "Via Demo 60",
+    "planting_date": "1993-07-23",
+    "height_m": 16.5,
+    "girth_cm": 106,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2026-06-12",
+    "last_pruning": "2025-01-07",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.374845,
+     46.480024
+    ]
+   },
+   "properties": {
+    "id": "ALB-0095",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 35",
+    "planting_date": "2011-05-27",
+    "height_m": 13.1,
+    "girth_cm": 175,
+    "risk_class": "A",
+    "health_status": "Critico",
+    "last_inspection": "2026-05-29",
+    "last_pruning": "2021-06-20",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.367834,
+     46.482952
+    ]
+   },
+   "properties": {
+    "id": "ALB-0096",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 40",
+    "planting_date": "1980-11-17",
+    "height_m": 9.5,
+    "girth_cm": 158,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-04-27",
+    "last_pruning": "2022-01-27",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.334651,
+     46.501759
+    ]
+   },
+   "properties": {
+    "id": "ALB-0097",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 56",
+    "planting_date": "1953-07-14",
+    "height_m": 7.6,
+    "girth_cm": 76,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2025-04-19",
+    "last_pruning": "2022-05-10",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.328546,
+     46.490624
+    ]
+   },
+   "properties": {
+    "id": "ALB-0098",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 40",
+    "planting_date": "1973-08-03",
+    "height_m": 16.6,
+    "girth_cm": 316,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-12-07",
+    "last_pruning": "2024-12-13",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.371802,
+     46.481823
+    ]
+   },
+   "properties": {
+    "id": "ALB-0099",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 26",
+    "planting_date": "2018-03-26",
+    "height_m": 10.6,
+    "girth_cm": 68,
+    "risk_class": "C",
+    "health_status": "Buono",
+    "last_inspection": "2023-12-21",
+    "last_pruning": "2022-07-09",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.323784,
+     46.490684
+    ]
+   },
+   "properties": {
+    "id": "ALB-0100",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 55",
+    "planting_date": "1994-09-08",
+    "height_m": 7.8,
+    "girth_cm": 131,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2025-08-21",
+    "last_pruning": "2025-07-26",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.3295,
+     46.488983
+    ]
+   },
+   "properties": {
+    "id": "ALB-0101",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 59",
+    "planting_date": "1994-12-07",
+    "height_m": 6.2,
+    "girth_cm": 92,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2024-04-28",
+    "last_pruning": "2023-12-30",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.33016,
+     46.484314
+    ]
+   },
+   "properties": {
+    "id": "ALB-0102",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 4",
+    "planting_date": "1983-12-30",
+    "height_m": 21.0,
+    "girth_cm": 104,
+    "risk_class": "D",
+    "health_status": "Critico",
+    "last_inspection": "2023-12-04",
+    "last_pruning": "2024-06-26",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.332638,
+     46.503985
+    ]
+   },
+   "properties": {
+    "id": "ALB-0103",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 43",
+    "planting_date": "2002-08-12",
+    "height_m": 12.8,
+    "girth_cm": 168,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-03-07",
+    "last_pruning": "2021-06-10",
+    "pruning_interval_months": 84,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.304635,
+     46.489947
+    ]
+   },
+   "properties": {
+    "id": "ALB-0104",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Don Bosco",
+    "street": "Via Demo 40",
+    "planting_date": "1964-10-04",
+    "height_m": 11.9,
+    "girth_cm": 84,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-04-04",
+    "last_pruning": "2024-10-31",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.32557,
+     46.489201
+    ]
+   },
+   "properties": {
+    "id": "ALB-0105",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 12",
+    "planting_date": "1967-04-05",
+    "height_m": 18.8,
+    "girth_cm": 254,
+    "risk_class": "C",
+    "health_status": "Buono",
+    "last_inspection": "2023-09-01",
+    "last_pruning": "2025-01-09",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.330239,
+     46.484586
+    ]
+   },
+   "properties": {
+    "id": "ALB-0106",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 20",
+    "planting_date": "1972-04-23",
+    "height_m": 21.1,
+    "girth_cm": 165,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2025-04-23",
+    "last_pruning": "2025-08-29",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.355847,
+     46.502447
+    ]
+   },
+   "properties": {
+    "id": "ALB-0107",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 37",
+    "planting_date": "1976-04-07",
+    "height_m": 6.8,
+    "girth_cm": 38,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2026-02-11",
+    "last_pruning": "2021-01-18",
+    "pruning_interval_months": 48,
+    "protected": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.329273,
+     46.501745
+    ]
+   },
+   "properties": {
+    "id": "ALB-0108",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 3",
+    "planting_date": "1992-06-11",
+    "height_m": 23.4,
+    "girth_cm": 226,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2025-12-22",
+    "last_pruning": "2019-12-30",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.352076,
+     46.500103
+    ]
+   },
+   "properties": {
+    "id": "ALB-0109",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 25",
+    "planting_date": "2018-08-18",
+    "height_m": 19.0,
+    "girth_cm": 70,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2024-09-26",
+    "last_pruning": "2023-12-25",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.30653,
+     46.485371
+    ]
+   },
+   "properties": {
+    "id": "ALB-0110",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Don Bosco",
+    "street": "Via Demo 16",
+    "planting_date": "1953-05-20",
+    "height_m": 19.6,
+    "girth_cm": 294,
+    "risk_class": "C",
+    "health_status": "Scadente",
+    "last_inspection": "2024-04-01",
+    "last_pruning": "2024-08-07",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.323638,
+     46.505208
+    ]
+   },
+   "properties": {
+    "id": "ALB-0111",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 5",
+    "planting_date": "1969-07-24",
+    "height_m": 4.4,
+    "girth_cm": 85,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-01-28",
+    "last_pruning": "2025-05-22",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.320073,
+     46.486681
+    ]
+   },
+   "properties": {
+    "id": "ALB-0112",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 26",
+    "planting_date": "1951-07-30",
+    "height_m": 15.6,
+    "girth_cm": 99,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2026-01-13",
+    "last_pruning": "2022-04-25",
+    "pruning_interval_months": 48,
+    "protected": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.364913,
+     46.483227
+    ]
+   },
+   "properties": {
+    "id": "ALB-0113",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 32",
+    "planting_date": "2002-12-01",
+    "height_m": 7.5,
+    "girth_cm": 76,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2025-06-22",
+    "last_pruning": "2023-01-19",
+    "pruning_interval_months": 84,
+    "protected": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.357489,
+     46.49441
+    ]
+   },
+   "properties": {
+    "id": "ALB-0114",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 52",
+    "planting_date": "1976-06-20",
+    "height_m": 14.0,
+    "girth_cm": 225,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2024-12-19",
+    "last_pruning": "2022-12-25",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.33023,
+     46.487704
+    ]
+   },
+   "properties": {
+    "id": "ALB-0115",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 12",
+    "planting_date": "1964-07-03",
+    "height_m": 23.4,
+    "girth_cm": 147,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2025-02-26",
+    "last_pruning": "2023-05-20",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.334573,
+     46.501225
+    ]
+   },
+   "properties": {
+    "id": "ALB-0116",
+    "species": "Pinus nigra",
+    "common_name": "Pino nero",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 41",
+    "planting_date": "1978-08-09",
+    "height_m": 20.6,
+    "girth_cm": 120,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-12-17",
+    "last_pruning": "2022-05-16",
+    "pruning_interval_months": 84,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.32231,
+     46.507204
+    ]
+   },
+   "properties": {
+    "id": "ALB-0117",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 54",
+    "planting_date": "1969-08-16",
+    "height_m": 14.4,
+    "girth_cm": 233,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2025-09-08",
+    "last_pruning": "2023-04-11",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.354397,
+     46.494113
+    ]
+   },
+   "properties": {
+    "id": "ALB-0118",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 8",
+    "planting_date": "1997-03-31",
+    "height_m": 21.5,
+    "girth_cm": 109,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2026-06-06",
+    "last_pruning": "2023-12-31",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.370597,
+     46.48027
+    ]
+   },
+   "properties": {
+    "id": "ALB-0119",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 19",
+    "planting_date": "1971-03-23",
+    "height_m": 21.8,
+    "girth_cm": 197,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2025-05-06",
+    "last_pruning": "2022-12-26",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.350908,
+     46.497856
+    ]
+   },
+   "properties": {
+    "id": "ALB-0120",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 54",
+    "planting_date": "1963-02-17",
+    "height_m": 16.5,
+    "girth_cm": 133,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2024-08-13",
+    "last_pruning": "2020-06-09",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.360461,
+     46.502248
+    ]
+   },
+   "properties": {
+    "id": "ALB-0121",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 46",
+    "planting_date": "2005-08-06",
+    "height_m": 10.5,
+    "girth_cm": 210,
+    "risk_class": "A",
+    "health_status": "Discreto",
+    "last_inspection": "2024-10-03",
+    "last_pruning": "2020-06-17",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.330512,
+     46.48859
+    ]
+   },
+   "properties": {
+    "id": "ALB-0122",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 43",
+    "planting_date": "1991-06-12",
+    "height_m": 7.9,
+    "girth_cm": 249,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-09-10",
+    "last_pruning": "2024-02-24",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.359074,
+     46.494425
+    ]
+   },
+   "properties": {
+    "id": "ALB-0123",
+    "species": "Quercus robur",
+    "common_name": "Farnia",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 19",
+    "planting_date": "2004-02-21",
+    "height_m": 22.5,
+    "girth_cm": 154,
+    "risk_class": "C",
+    "health_status": "Discreto",
+    "last_inspection": "2023-04-07",
+    "last_pruning": "2024-02-05",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.325733,
+     46.486009
+    ]
+   },
+   "properties": {
+    "id": "ALB-0124",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 31",
+    "planting_date": "1981-03-16",
+    "height_m": 15.0,
+    "girth_cm": 167,
+    "risk_class": "B",
+    "health_status": "Discreto",
+    "last_inspection": "2025-08-30",
+    "last_pruning": "2024-10-05",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.324758,
+     46.501432
+    ]
+   },
+   "properties": {
+    "id": "ALB-0125",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 57",
+    "planting_date": "1955-11-22",
+    "height_m": 18.2,
+    "girth_cm": 196,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-07-16",
+    "last_pruning": "2024-04-28",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.365165,
+     46.481491
+    ]
+   },
+   "properties": {
+    "id": "ALB-0126",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 40",
+    "planting_date": "1951-07-20",
+    "height_m": 4.7,
+    "girth_cm": 167,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2024-10-27",
+    "last_pruning": "2023-05-09",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.3313,
+     46.488053
+    ]
+   },
+   "properties": {
+    "id": "ALB-0127",
+    "species": "Platanus x acerifolia",
+    "common_name": "Platano",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 43",
+    "planting_date": "1987-12-03",
+    "height_m": 10.3,
+    "girth_cm": 269,
+    "risk_class": "A",
+    "health_status": "Critico",
+    "last_inspection": "2024-05-30",
+    "last_pruning": "2026-04-21",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.306478,
+     46.490356
+    ]
+   },
+   "properties": {
+    "id": "ALB-0128",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Don Bosco",
+    "street": "Via Demo 20",
+    "planting_date": "1993-10-05",
+    "height_m": 15.2,
+    "girth_cm": 114,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-05-27",
+    "last_pruning": "2019-09-05",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.359773,
+     46.500642
+    ]
+   },
+   "properties": {
+    "id": "ALB-0129",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 32",
+    "planting_date": "1969-07-17",
+    "height_m": 17.6,
+    "girth_cm": 144,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2026-04-14",
+    "last_pruning": "2025-04-07",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.321769,
+     46.488507
+    ]
+   },
+   "properties": {
+    "id": "ALB-0130",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 22",
+    "planting_date": "1981-11-02",
+    "height_m": 7.6,
+    "girth_cm": 75,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-03-25",
+    "last_pruning": "2026-03-11",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.32577,
+     46.486703
+    ]
+   },
+   "properties": {
+    "id": "ALB-0131",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Europa-Novacella",
+    "street": "Via Demo 44",
+    "planting_date": "1976-11-24",
+    "height_m": 8.2,
+    "girth_cm": 90,
+    "risk_class": "C",
+    "health_status": "Discreto",
+    "last_inspection": "2023-07-25",
+    "last_pruning": "2022-03-11",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.296728,
+     46.489221
+    ]
+   },
+   "properties": {
+    "id": "ALB-0132",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Don Bosco",
+    "street": "Via Demo 59",
+    "planting_date": "2022-05-24",
+    "height_m": 14.2,
+    "girth_cm": 118,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2024-07-22",
+    "last_pruning": "2021-09-13",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.352103,
+     46.500862
+    ]
+   },
+   "properties": {
+    "id": "ALB-0133",
+    "species": "Tilia cordata",
+    "common_name": "Tiglio",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 51",
+    "planting_date": "2013-05-31",
+    "height_m": 10.4,
+    "girth_cm": 228,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2025-09-22",
+    "last_pruning": "2023-09-23",
+    "pruning_interval_months": 48,
+    "protected": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.363386,
+     46.486241
+    ]
+   },
+   "properties": {
+    "id": "ALB-0134",
+    "species": "Aesculus hippocastanum",
+    "common_name": "Ippocastano",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 52",
+    "planting_date": "1963-04-20",
+    "height_m": 15.3,
+    "girth_cm": 255,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2026-03-23",
+    "last_pruning": "2019-11-09",
+    "pruning_interval_months": 36,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.304362,
+     46.490403
+    ]
+   },
+   "properties": {
+    "id": "ALB-0135",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Don Bosco",
+    "street": "Via Demo 15",
+    "planting_date": "1971-04-27",
+    "height_m": 19.5,
+    "girth_cm": 173,
+    "risk_class": "A",
+    "health_status": "Buono",
+    "last_inspection": "2026-06-17",
+    "last_pruning": "2025-04-27",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.360129,
+     46.497619
+    ]
+   },
+   "properties": {
+    "id": "ALB-0136",
+    "species": "Celtis australis",
+    "common_name": "Bagolaro",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 23",
+    "planting_date": "2013-12-02",
+    "height_m": 7.1,
+    "girth_cm": 229,
+    "risk_class": "C",
+    "health_status": "Buono",
+    "last_inspection": "2022-10-23",
+    "last_pruning": "2020-10-24",
+    "pruning_interval_months": 60,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.363963,
+     46.478647
+    ]
+   },
+   "properties": {
+    "id": "ALB-0137",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 33",
+    "planting_date": "1962-07-17",
+    "height_m": 6.7,
+    "girth_cm": 79,
+    "risk_class": "B",
+    "health_status": "Scadente",
+    "last_inspection": "2024-02-26",
+    "last_pruning": "2022-04-07",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.365392,
+     46.486591
+    ]
+   },
+   "properties": {
+    "id": "ALB-0138",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Oltrisarco-Aslago",
+    "street": "Via Demo 1",
+    "planting_date": "1962-07-11",
+    "height_m": 9.5,
+    "girth_cm": 71,
+    "risk_class": "D",
+    "health_status": "Scadente",
+    "last_inspection": "2025-08-28",
+    "last_pruning": "2020-07-30",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.355565,
+     46.50198
+    ]
+   },
+   "properties": {
+    "id": "ALB-0139",
+    "species": "Fraxinus excelsior",
+    "common_name": "Frassino",
+    "district": "Centro-Piani-Rencio",
+    "street": "Via Demo 36",
+    "planting_date": "1952-08-04",
+    "height_m": 18.1,
+    "girth_cm": 142,
+    "risk_class": "B",
+    "health_status": "Buono",
+    "last_inspection": "2025-08-24",
+    "last_pruning": "2021-08-28",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.328584,
+     46.503311
+    ]
+   },
+   "properties": {
+    "id": "ALB-0140",
+    "species": "Acer platanoides",
+    "common_name": "Acero riccio",
+    "district": "Gries-San Quirino",
+    "street": "Via Demo 1",
+    "planting_date": "1993-02-03",
+    "height_m": 8.6,
+    "girth_cm": 297,
+    "risk_class": "A",
+    "health_status": "Scadente",
+    "last_inspection": "2026-02-11",
+    "last_pruning": "2019-10-25",
+    "pruning_interval_months": 48,
+    "protected": false
+   }
+  }
+ ]
+}

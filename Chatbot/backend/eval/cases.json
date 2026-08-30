@@ -1,0 +1,172 @@
+[
+  {
+    "name": "simple_count",
+    "question": "Quanti tigli ci sono nel quartiere Gries?",
+    "expected_tools": [
+      "search_trees"
+    ],
+    "forbidden_tools": [
+      "cadastre_stats"
+    ],
+    "must_contain": [
+      "6"
+    ],
+    "must_not_contain": [],
+    "expected_citations": "trees",
+    "chart_forbidden": true
+  },
+  {
+    "name": "risk_and_inspection_filter",
+    "question": "Elenca gli alberi in classe D non ispezionati da almeno 24 mesi.",
+    "expected_tools": [
+      "search_trees"
+    ],
+    "forbidden_tools": [
+      "cadastre_stats"
+    ],
+    "must_contain": [
+      "ALB-"
+    ],
+    "must_not_contain": [],
+    "expected_citations": "trees",
+    "chart_forbidden": true
+  },
+  {
+    "name": "spatial_query",
+    "question": "Ci sono alberi a rischio moderato o elevato entro 250 metri dalla Scuola Primaria Gries?",
+    "expected_tools": [
+      "search_trees_near"
+    ],
+    "forbidden_tools": [
+      "cadastre_stats"
+    ],
+    "must_contain": [
+      "ALB-"
+    ],
+    "must_not_contain": [],
+    "expected_citations": "trees",
+    "chart_forbidden": true
+  },
+  {
+    "name": "stats_for_chart",
+    "question": "Come sono distribuiti gli alberi per classe di rischio?",
+    "expected_tools": [
+      "cadastre_stats"
+    ],
+    "must_contain": [],
+    "must_not_contain": [
+      "```",
+      "|---"
+    ],
+    "expected_citations": "chart"
+  },
+  {
+    "name": "pruning_rule",
+    "question": "Ogni quanto va potato un platano secondo il regolamento?",
+    "expected_tools": [
+      "consult_regulation"
+    ],
+    "forbidden_tools": [
+      "cadastre_stats"
+    ],
+    "must_contain": [
+      "36",
+      "Art. 10"
+    ],
+    "must_not_contain": [],
+    "expected_citations": "articles",
+    "chart_forbidden": true
+  },
+  {
+    "name": "class_d_inspection_rule",
+    "question": "Con che frequenza va ispezionato un albero in classe D?",
+    "expected_tools": [
+      "consult_regulation"
+    ],
+    "forbidden_tools": [
+      "cadastre_stats"
+    ],
+    "must_contain": [
+      "12",
+      "Art. 5"
+    ],
+    "must_not_contain": [],
+    "expected_citations": "articles",
+    "chart_forbidden": true
+  },
+  {
+    "name": "missing_data_must_admit",
+    "question": "Qual e' il valore economico stimato degli alberi di Oltrisarco?",
+    "must_contain_any": [
+      "non e' presente",
+      "non è presente",
+      "non sono presenti",
+      "non e' disponibile",
+      "non è disponibile",
+      "non risulta",
+      "non contiene",
+      "non compare"
+    ],
+    "must_not_contain": [
+      "euro stimati",
+      "valore stimato",
+      "€"
+    ],
+    "expected_citations": "none",
+    "chart_forbidden": true
+  },
+  {
+    "name": "out_of_domain_must_refuse",
+    "question": "Quali sono gli orari della biblioteca comunale di Bolzano?",
+    "must_contain_any": [
+      "non e' presente",
+      "non è presente",
+      "non sono presenti",
+      "non e' disponibile",
+      "non è disponibile",
+      "non risulta",
+      "non contiene",
+      "non lo prevede",
+      "non rientra"
+    ],
+    "must_not_contain": [
+      "orario di apertura",
+      "aperta dalle",
+      "aperto dalle"
+    ],
+    "expected_citations": "none",
+    "chart_forbidden": true
+  },
+  {
+    "name": "unknown_place_no_invention",
+    "question": "Quanti alberi ci sono entro 100 metri da Piazza Inventata?",
+    "must_contain_any": [
+      "non e' presente",
+      "non è presente",
+      "non risulta",
+      "non e' in anagrafica",
+      "non è in anagrafica",
+      "non esiste",
+      "non compare",
+      "non ho trovato"
+    ],
+    "must_not_contain": [],
+    "expected_citations": "none",
+    "chart_forbidden": true
+  },
+  {
+    "name": "unknown_district_no_invention",
+    "question": "Quanti platani ci sono nel quartiere Sant'Antonio?",
+    "must_contain_any": [
+      "non e' presente",
+      "non è presente",
+      "non risulta",
+      "non esiste",
+      "non compare",
+      "non ho trovato"
+    ],
+    "must_not_contain": [],
+    "expected_citations": "none",
+    "chart_forbidden": true
+  }
+]

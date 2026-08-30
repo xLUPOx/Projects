@@ -1,0 +1,136 @@
+/* Sistema di token.
+   Il riferimento visivo e' la scheda di rilievo dendrologico: fondo grigio-lichene
+   freddo, inchiostro corteccia, e una sola scala cromatica che porta informazione
+   vera — le quattro classi di propensione al cedimento. Nessun accento decorativo
+   fuori da quella scala. */
+
+:root {
+  --ink: #182420;
+  --ink-soft: #4a5a53;
+  --ink-faint: #7b8a83;
+
+  --paper: #e8ebe5;
+  --paper-high: #f4f6f2;
+  --paper-etched: #dde1d9;
+  --rule: #c4cbc0;
+  --rule-strong: #a7b1a4;
+
+  --moss: #2e5e4e;
+  --moss-light: #dfeae4;
+
+  /* Classi di rischio: la sola scala cromatica dell'interfaccia, e porta dato.
+     I quattro passi sono stati verificati con il validatore di palette (banda di
+     luminosita', soglia di croma, separazione per deuteranopia/tritanopia): la
+     coppia B/C, che nella prima stesura era indistinguibile, e' stata ri-steppata.
+     L'ocra B resta sotto 3:1 sul fondo, quindi non compare mai da solo: la lettera
+     della classe e' sempre scritta accanto al colore. */
+  --class-a: #2f7d52;
+  --class-b: #d0a80e;
+  --class-c: #d94f14;
+  --class-d: #93273f;
+
+  /* Bordi piu' scuri: danno il contrasto che il riempimento da solo non ha. */
+  --class-a-border: #1d5335;
+  --class-b-border: #8a6f07;
+  --class-c-border: #94330a;
+  --class-d-border: #631a2a;
+
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-display: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif;
+  --font-data: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --radius: 3px;
+  --shadow: 0 1px 2px rgb(24 36 32 / 0.08), 0 8px 24px -16px rgb(24 36 32 / 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 2px;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* Mappa: il basemap resta muto, il colore lo porta il dato.
+   Le tessere OSM sono vivaci: desaturarle e' cio' che lascia leggibile la scala
+   delle classi di rischio, che e' l'unica informazione cromatica della pagina. */
+.leaflet-tile-pane {
+  filter: grayscale(0.78) contrast(0.94) brightness(1.05);
+}
+
+.leaflet-container {
+  background: var(--paper-etched);
+  font-family: var(--font-body);
+}
+
+.leaflet-control-attribution {
+  background: rgb(244 246 242 / 0.8) !important;
+  font-size: 10px;
+  color: var(--ink-faint);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.place-marker {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  background: var(--paper-high);
+  font-family: var(--font-data);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
