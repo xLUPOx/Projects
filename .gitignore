@@ -1,0 +1,10 @@
+# Ambiente Python: sta fuori da Chatbot/ perche' su Windows spostare un
+# virtualenv rompe gli .exe di pip, che hanno il percorso assoluto dentro.
+venv/
+
+# Materiale personale, tenuto fuori da GitHub per scelta: il repo e' pubblico.
+Chatbot/COLLOQUIO.md
+Chatbot/PRESENTAZIONE.md
+
+# Esercizi di altri progetti: andranno in cartelle loro, non dentro Chatbot/.
+Chatbot/esempi/

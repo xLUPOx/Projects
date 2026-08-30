@@ -201,8 +201,9 @@ quartiere inesistente. Su quei quattro il controllo che porta il peso è
 3. Multilingua italiano/tedesco: etichette localizzate separate dagli
    identificatori, le due versioni ufficiali del regolamento indicizzate
    entrambe con lo stesso `article_id`.
-4. La suite eval in CI, con metriche di recupero, costo e latenza separate
-   dall'esito end-to-end.
+4. Eseguire la suite eval automaticamente ad ogni modifica, e misurare non solo
+   se le risposte sono corrette ma anche quanto costano e quanto sono lente,
+   come voci separate dal risultato finale.
 5. Cache su domanda normalizzata più versione dei dati: i tool sono già
    deterministici.
 6. Registrazione delle ispezioni, che è ciò che trasformerebbe l'assistente da
