@@ -1,6 +1,7 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { Api } from './api';
-import { Article, Chart, Message, Place, Step, Tree } from './types';
+import { citedCodes, segment } from './format';
+import { Article, Message, Place, Step, Tree } from './types';
 
 /**
  * Stato condiviso fra chat e mappa.
@@ -27,22 +28,6 @@ export class State {
   readonly hovered = signal<string | null>(null);
   /** Articolo del regolamento aperto in lettura. */
   readonly openArticle = signal<Article | null>(null);
-
-  readonly chart = computed<Chart | null>(() => {
-    const messages = this.messages();
-    for (let i = messages.length - 1; i >= 0; i--) {
-      if (messages[i].chart) return messages[i].chart;
-    }
-    return null;
-  });
-
-  readonly articles = computed<Article[]>(() => {
-    const messages = this.messages();
-    for (let i = messages.length - 1; i >= 0; i--) {
-      if (messages[i].articles.length) return messages[i].articles;
-    }
-    return [];
-  });
 
   private aborter: AbortController | null = null;
 
@@ -137,7 +122,7 @@ export class State {
               articles: event.articles,
               chart: event.chart,
             }));
-            this.highlighted.set(new Set(event.trees.map((t) => t.id)));
+            this.highlighted.set(highlightFor(this.lastText(), event.trees));
             break;
 
           case 'error':
@@ -158,6 +143,11 @@ export class State {
     }
   }
 
+  private lastText(): string {
+    const messages = this.messages();
+    return messages.length ? messages[messages.length - 1].text : '';
+  }
+
   private updateLast(transform: (m: Message) => Message): void {
     this.messages.update((messages) => {
       if (!messages.length) return messages;
@@ -166,6 +156,21 @@ export class State {
       return copy;
     });
   }
+}
+
+/**
+ * Gli alberi da accendere in mappa.
+ *
+ * La mappa segue la risposta, non la ricerca. Se il testo non nomina nemmeno un
+ * albero — "questo dato non e' presente nel catasto" — quegli alberi il modello
+ * li ha soltanto sondati per capire quali campi esistono: accenderli
+ * significherebbe dire "guarda qui" indicando esemplari di cui la risposta non
+ * afferma niente. Se invece ne cita anche uno solo si accendono tutti quelli
+ * trovati, perche' li' l'elenco in chat e' troncato ma la mappa non deve esserlo.
+ */
+function highlightFor(text: string, trees: Tree[]): Set<string> {
+  if (!citedCodes(segment(text)).size) return new Set();
+  return new Set(trees.map((t) => t.id));
 }
 
 function empty(role: 'user' | 'assistant', text: string, pending = false): Message {

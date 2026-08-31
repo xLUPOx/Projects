@@ -60,6 +60,7 @@ qui Node è 22.19. Controlla con `node -v`.
 
 ```powershell
 npx @angular/cli@20 new frontend --style=css --ssr=false --skip-git --package-manager=npm --defaults
+cd Chatbot
 cd frontend
 npm install leaflet @types/leaflet
 ```
@@ -81,6 +82,7 @@ Servono due terminali. Il backend sta sulla **8000**, il frontend sulla **4200**
 
 ```powershell
 .\venv\Scripts\Activate.ps1
+cd Chatbot
 cd backend
 python -m uvicorn main:app --reload
 ```
@@ -88,11 +90,51 @@ python -m uvicorn main:app --reload
 | URL | Cosa mostra |
 |---|---|
 | http://127.0.0.1:8000/docs | Swagger degli endpoint |
-| http://127.0.0.1:8000/api/health | Se il RAG usa embedding o BM25, e quanti alberi sono caricati |
+| http://127.0.0.1:8000/api/health | Se il RAG usa embedding o BM25, quanti alberi sono caricati, e come stanno le chiavi |
+
+### Controllare le chiavi API
+
+Da un terminale qualsiasi, con il backend acceso — non serve fermarlo:
+
+```powershell
+(Invoke-RestMethod http://127.0.0.1:8000/api/health).keys
+```
+
+```
+total usable exhausted
+----- ------ ---------
+    4      4         0
+```
+
+In PowerShell scrivi `curl.exe`, non `curl`: `curl` è un alias di
+`Invoke-WebRequest` e con `-s` dà errore.
+
+| Campo | Cosa dice |
+|---|---|
+| `total` | quante chiavi ha letto da `GEMINI_API_KEYS` |
+| `usable` | quante sono spendibili **adesso** |
+| `exhausted` | quante hanno finito la quota **giornaliera** |
+
+`usable` non è `total - exhausted`, e la differenza conta durante una demo. Gli
+stop sono due: il limite **al minuto** mette la chiave in pausa per qualche
+decina di secondi, quello **giornaliero** la toglie dal giro. Una chiave in
+pausa breve sparisce da `usable` senza comparire in `exhausted`: `usable: 2,
+exhausted: 0` su 4 chiavi significa che due rientrano da sole entro un minuto,
+non che le hai perse.
+
+Anche `exhausted` si riassorbe: sono le chiavi esaurite *adesso*, riprovate
+dopo mezz'ora, perché le quote di Google si azzerano a mezzanotte del fuso
+Pacifico e una chiave già riabilitata non deve restare fuori.
+
+*Quale* chiave sia esaurita l'endpoint non lo dice, di proposito: non è
+autenticato, e stampare pezzi di chiave in una risposta HTTP è il modo classico
+per farle finire in un log. Se serve saperlo, il warning della rotazione è nei
+log di uvicorn.
 
 ### Terminale 2 — frontend
 
 ```powershell
+cd Chatbot
 cd frontend
 npm start
 ```

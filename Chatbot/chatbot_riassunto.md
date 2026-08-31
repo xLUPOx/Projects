@@ -99,18 +99,24 @@ minuto, dove si aspetta, da quella giornaliera, dove aspettare è inutile.
 
 ## 6. Stato condiviso — `frontend/src/app/state.ts`
 
-I signals che chat e mappa scrivono entrambe: `highlighted` (gli alberi
+I signal che chat e mappa scrivono entrambe: `highlighted` (gli alberi
 dell'ultima risposta), `selected`, `hovered`, `openArticle`, più `cadastre` e
 `messages`. `load()` interroga prima `/api/health` e poi scarica: un errore
 all'avvio dice *quale* è il problema invece di limitarsi a fallire. `ask()`
-consuma lo stream evento per evento; `api.ts` legge il `ReadableStream`
+consuma lo stream evento per evento e scrive sempre e solo sull'ultimo
+messaggio: una risposta chiusa — testo, fonti, grafico — non si riscrive più, e
+nessuno stato qui deriva dalla cronologia. `api.ts` legge il `ReadableStream`
 accumulando in un buffer, perché un chunk di rete può spezzare un JSON a metà.
 
 ## 7. Resa — `format.ts`, `chip.ts`, `map.ts`, `chart.ts`
 
 `segment()` non è un parser Markdown: isola `ALB-0042` e `Art. 10` in pezzi
 tipizzati, perché diventino targhette cliccabili invece che testo morto.
-`chip.ts` è quella targhetta.
+`chip.ts` è quella targhetta, e riceve gli articoli dalla risposta che la
+contiene (`[articles]="message.articles"`) invece di cercarli in uno stato
+globale: le fonti appartengono al messaggio che le ha prodotte, così `Art. 4`
+cliccato in una risposta vecchia apre il proprio articolo anche se l'ultima
+risposta ne ha citati altri.
 `map.ts` tiene Leaflet allineato allo stato con degli `effect`: gli alberi citati
 restano accesi, gli altri sbiadiscono, hover e click viaggiano nei due sensi.
 `chart.ts` disegna barre orizzontali e usa il colore solo dove porta

@@ -11,7 +11,7 @@
  *
  *     npm test
  */
-import { normalizeArticle, segment } from './format';
+import { citedCodes, normalizeArticle, segment } from './format';
 
 /** Solo i pezzi di un certo tipo, su tutte le righe: rende leggibili le attese. */
 function values(text: string, kind: 'tree' | 'article'): string[] {
@@ -44,6 +44,26 @@ describe('segment', () => {
     expect(pieces.map((p) => p.value).join('')).not.toContain('*');
   });
 
+  it('riconosce un riferimento anche se il modello lo mette in grassetto', () => {
+    // la stessa domanda, chiesta due volte, tornava una volta "ALB-0048" e una
+    // volta "**ALB-0048**": la seconda forma non diventava una targhetta
+    expect(values('- **ALB-0048** - Pino nero', 'tree')).toEqual(['ALB-0048']);
+    expect(values('(classe C, **Art. 4**)', 'article')).toEqual(['Art. 4']);
+    expect(values('(**Art.4**)', 'article')).toEqual(['Art. 4']);
+  });
+
+  it('estrae i riferimenti anche da dentro un grassetto piu lungo', () => {
+    const pieces = segment('**ALB-0048 - Pino nero**')[0].pieces;
+    expect(pieces.filter((p) => p.kind === 'tree').map((p) => p.value)).toEqual(['ALB-0048']);
+    expect(pieces.map((p) => p.value).join('')).not.toContain('*');
+  });
+
+  it('lascia in grassetto cio che non e un riferimento', () => {
+    const pieces = segment('Il **platano** e ALB-0001.')[0].pieces;
+    expect(pieces.filter((p) => p.kind === 'strong').map((p) => p.value)).toEqual(['platano']);
+    expect(pieces.filter((p) => p.kind === 'tree').map((p) => p.value)).toEqual(['ALB-0001']);
+  });
+
   it('riconosce gli elenchi puntati', () => {
     const lines = segment('- ALB-0001\n* ALB-0002\ntesto');
     expect(lines.map((l) => l.bullet)).toEqual([true, true, false]);
@@ -64,5 +84,39 @@ describe('segment', () => {
       false,
       true,
     ]);
+  });
+});
+
+describe('citedCodes', () => {
+  /** Come il footer delle fonti: gli alberi tornati dai tool, filtrati sul testo. */
+  function sources(text: string, returned: string[]): string[] {
+    const named = citedCodes(segment(text));
+    return returned.filter((id) => named.has(id));
+  }
+
+  it('non cita gli alberi che la risposta non nomina', () => {
+    // la ricerca a vuoto su Oltrisarco: cinque alberi sondati, nessuna
+    // affermazione su di loro, quindi nessuna targhetta
+    const text = "Questo dato non e' presente nel catasto.";
+    expect(sources(text, ['ALB-0061', 'ALB-0138', 'ALB-0040'])).toEqual([]);
+  });
+
+  it('cita gli alberi nominati, nell ordine del catasto', () => {
+    const text = '- ALB-0044\n- ALB-0117';
+    expect(sources(text, ['ALB-0044', 'ALB-0085', 'ALB-0117'])).toEqual([
+      'ALB-0044',
+      'ALB-0117',
+    ]);
+  });
+
+  it('conta come citato anche un codice scritto in grassetto', () => {
+    expect(sources('- **ALB-0048** - Pino nero', ['ALB-0048'])).toEqual(['ALB-0048']);
+  });
+
+  it('distingue la risposta che cita dalla ricerca a vuoto', () => {
+    // e' la stessa condizione che in state.ts decide se accendere la mappa:
+    // nessun codice nel testo, nessun albero evidenziato
+    expect(citedCodes(segment("Questo dato non e' presente nel catasto.")).size).toBe(0);
+    expect(citedCodes(segment('Nel quartiere Gries: ALB-0044.')).size).toBe(1);
   });
 });

@@ -34,7 +34,7 @@
           </ol>
         }
 
-        @for (line of lines(message.text); track $index) {
+        @for (line of lines(message.text, message.pending); track $index) {
           @if (line.code) {
             <pre class="preformatted">{{ line.pieces[0].value }}</pre>
           } @else {
@@ -45,7 +45,11 @@
                   <app-chip [code]="piece.value" kind="tree" />
                 }
                 @case ('article') {
-                  <app-chip [code]="piece.value" kind="article" />
+                  <app-chip
+                    [code]="piece.value"
+                    kind="article"
+                    [articles]="message.articles"
+                  />
                 }
                 @case ('strong') {
                   <b>{{ piece.value }}</b>
@@ -76,21 +80,28 @@
           </div>
         }
 
-        @if (!message.pending && (message.trees.length || message.articles.length)) {
-          <footer class="sources">
-            <span class="eyebrow">Fonti</span>
-            <div class="source-list">
-              @for (article of message.articles; track article.reference) {
-                <app-chip [code]="article.reference" kind="article" />
-              }
-              @for (tree of message.trees.slice(0, 12); track tree.id) {
-                <app-chip [code]="tree.id" kind="tree" />
-              }
-              @if (message.trees.length > 12) {
-                <span class="rest">+{{ message.trees.length - 12 }} in mappa</span>
-              }
-            </div>
-          </footer>
+        @if (!message.pending) {
+          @let cited = citedTrees(message);
+          @if (cited.length || message.articles.length) {
+            <footer class="sources">
+              <span class="eyebrow">Fonti</span>
+              <div class="source-list">
+                @for (article of message.articles; track article.reference) {
+                  <app-chip
+                    [code]="article.reference"
+                    kind="article"
+                    [articles]="message.articles"
+                  />
+                }
+                @for (tree of cited.slice(0, 12); track tree.id) {
+                  <app-chip [code]="tree.id" kind="tree" />
+                }
+                @if (cited.length > 12) {
+                  <span class="rest">+{{ cited.length - 12 }} in mappa</span>
+                }
+              </div>
+            </footer>
+          }
         }
       </article>
     }

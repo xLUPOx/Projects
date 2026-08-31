@@ -1,14 +1,15 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { State } from './state';
+import { Article } from './types';
 
 /**
  * La targhetta.
  *
- * E' l'elemento firma dell'interfaccia e non e' un vezzo: nel rilievo arboreo
- * ogni esemplare porta una targhetta di alluminio punzonata inchiodata al fusto,
- * ed e' quella a rendere il dato verificabile in campo. Qui fa lo stesso lavoro:
- * ogni affermazione dell'assistente e' agganciata al codice della sua fonte, e il
- * codice e' cliccabile. Se una frase non ha targhetta, non ha fonte.
+ * E' l'elemento firma dell'interfaccia: nel rilievo arboreo ogni esemplare porta 
+ * una targhetta di alluminio punzonata inchiodata al fusto, ed e' quella a 
+ * rendere il dato verificabile in campo. Qui fa lo stesso lavoro: 
+ * ogni affermazione dell'assistente e' agganciata al codice della sua fonte, 
+ * e il codice e' cliccabile. Se una frase non ha targhetta, non ha fonte.
  */
 @Component({
   selector: 'app-chip',
@@ -91,6 +92,10 @@ export class Chip {
 
   readonly code = input.required<string>();
   readonly kind = input<'tree' | 'article'>('tree');
+  /** Gli articoli della risposta che porta questa targhetta: una targhetta in
+   * un messaggio vecchio deve aprire il proprio articolo, non quelli citati
+   * dall'ultima risposta. */
+  readonly articles = input<Article[]>([]);
 
   readonly tree = computed(() => this.state.findTree(this.code()));
 
@@ -115,7 +120,7 @@ export class Chip {
 
   open(): void {
     if (this.kind() === 'article') {
-      const article = this.state.articles().find((a) => a.reference === this.code());
+      const article = this.articles().find((a) => a.reference === this.code());
       this.state.openArticle.set(article ?? null);
       return;
     }

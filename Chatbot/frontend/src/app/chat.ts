@@ -9,8 +9,9 @@ import {
 } from '@angular/core';
 import { Chart } from './chart';
 import { Chip } from './chip';
-import { Line, segment } from './format';
+import { citedCodes, Line, segment } from './format';
 import { State } from './state';
+import { Message, Tree } from './types';
 
 @Component({
   selector: 'app-chat',
@@ -64,8 +65,41 @@ export class Chat {
     });
   }
 
-  lines(text: string): Line[] {
-    return segment(text);
+  /**
+   * Il testo gia' segmentato, ma solo per i messaggi finiti.
+   *
+   * Il template chiama `lines()` a ogni ciclo di rilevamento, e in una
+   * conversazione lunga rifare la segmentazione di tutte le risposte a ogni
+   * ciclo si sente. Mentre la risposta arriva pero' il testo cambia a ogni
+   * token: metterlo in cache vorrebbe dire conservare una voce per ogni
+   * prefisso, cioe' perdere memoria a ogni carattere. Durante lo stream si
+   * rifa' il lavoro, a stream chiuso lo si ricorda.
+   */
+  private readonly parsed = new Map<string, Line[]>();
+
+  lines(text: string, pending = false): Line[] {
+    if (pending) return segment(text);
+    let value = this.parsed.get(text);
+    if (!value) {
+      value = segment(text);
+      this.parsed.set(text, value);
+    }
+    return value;
+  }
+
+  /**
+   * Gli alberi da mostrare fra le fonti: solo quelli che la risposta nomina
+   * davvero.
+   *
+   * Il backend manda tutti gli alberi toccati dai tool, e fa bene: servono ad
+   * accendere la mappa. Ma una risposta come "questo dato non e' presente nel
+   * catasto" non afferma niente su quei cinque alberi sondati, e mettergli
+   * sotto una fila di targhette e' esattamente la citazione che non regge —
+   * proprio il patto che le targhette esistono per garantire.
+   */
+  citedTrees(message: Message): Tree[] {
+    const named = citedCodes(this.lines(message.text));
+    return message.trees.filter((tree) => named.has(tree.id));
   }
 
   /** Gli argomenti del tool in chiaro: e' meta' della fiducia nella risposta. */

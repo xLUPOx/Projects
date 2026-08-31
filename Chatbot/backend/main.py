@@ -81,6 +81,13 @@ REGOLE NON NEGOZIABILI
 STILE
 Risposte brevi e operative, adatte a un tecnico dell'ufficio verde. Usa elenchi
 puntati quando citi piu' di tre alberi. Niente preamboli.
+Quando elenchi alberi, ogni riga ha sempre la stessa forma, anche se la domanda
+era un semplice conteggio:
+  - ALB-0048 - Pino nero (*Pinus nigra*), classe C, ultima ispezione 23/03/2024
+Includi solo i campi che il tool ha restituito e che servono alla domanda; se la
+domanda riguarda distanza o ispezione, aggiungili in coda alla riga.
+Scrivi i codici e gli articoli sempre in chiaro (ALB-0048, Art. 4), mai dentro
+asterischi: l'interfaccia li trasforma in targhette cliccabili.
 
 Data odierna: {today}
 """
@@ -239,12 +246,14 @@ def _collect_references(
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any] | None]:
     """Estrae dalle risposte dei tool cio' che serve al frontend per le citazioni.
 
-    Gli alberi restituiti finiscono tutti fra le fonti anche se il testo non li
-    nomina: sono comunque evidenziati sulla mappa, quindi la targhetta rimanda a
-    qualcosa. Gli articoli no. Un articolo recuperato dal RAG ma non usato nella
-    risposta e' solo un residuo della ricerca: mostrarlo fra le fonti rompe il
-    patto per cui ogni targhetta corrisponde a un'affermazione, e insegna a non
-    fidarsi anche delle altre.
+    Gli alberi restituiti tornano tutti: servono ad accendere la mappa, che
+    mostra su cosa ha guardato l'agente. Quali di questi meritino una targhetta
+    fra le fonti lo decide il frontend, tenendo solo quelli che il testo nomina
+    davvero — un albero sondato da una ricerca a vuoto non e' la fonte di
+    niente. Gli articoli invece si filtrano gia' qui, perche' non hanno un
+    corrispettivo sulla mappa: un articolo recuperato dal RAG ma non usato nella
+    risposta e' solo un residuo della ricerca, e mostrarlo fra le fonti rompe il
+    patto per cui ogni targhetta corrisponde a un'affermazione.
     """
     trees: dict[str, dict[str, Any]] = {}
     articles: dict[str, dict[str, Any]] = {}
