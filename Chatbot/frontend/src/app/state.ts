@@ -175,7 +175,7 @@ export class State {
  * eccezione una risposta fatta di solo grafico lascerebbe la mappa spenta
  * proprio quando ha piu' da mostrare.
  */
-function highlightFor(text: string, trees: Tree[], chart: Chart | null): Set<string> {
+export function highlightFor(text: string, trees: Tree[], chart: Chart | null): Set<string> {
   const asserted = citedCodes(segment(text)).size > 0 || chart !== null;
   return asserted ? new Set(trees.map((t) => t.id)) : new Set();
 }

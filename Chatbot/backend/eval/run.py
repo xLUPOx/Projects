@@ -10,11 +10,15 @@ questi campi (tutti facoltativi tranne question ed expected_citations):
     must_not_contain   parole che non devono esserci
     must_contain_any   almeno una di queste: serve ai rifiuti, che hanno una
                        forma precisa ma molte formulazioni
-    expected_citations trees | articles | chart | none
+    expected_citations trees | articles | chart | none — verifica cosa
+                       l'interfaccia mostrerebbe come fonte, non il payload
+                       grezzo: un albero conta solo se il suo codice ALB-xxxx
+                       compare nel testo (vedi _cited_trees), esattamente come
+                       fa citedCodes() in frontend/src/app/format.ts
     chart_forbidden    vero se la domanda non deve produrre un grafico
 
 Il confronto e' per parola intera, non per sottostringa: vedi _mentions.
-Il ciclo dell'agente ha una copia dei suoi controlli in test_agent.py, che gira
+Il ciclo dell'agente ha una copia dei suoi controlli in tests/test_agent.py, che gira
 offline con un modello finto. Qui si misura solo cio' che quel test non puo'
 vedere: se il *vero* modello sceglie i tool giusti e sta dentro le regole.
 
@@ -55,6 +59,23 @@ def _mentions(term: str, text: str) -> bool:
     prefix = r"\b" if term[:1].isalnum() else ""
     suffix = r"\b" if term[-1:].isalnum() else ""
     return re.search(prefix + pattern + suffix, text.lower()) is not None
+
+
+def _cited_trees(end: dict, text: str) -> list[dict]:
+    """Gli alberi che l'interfaccia mostra davvero come fonte.
+
+    `end["trees"]` e' il payload SSE grezzo: il backend ci manda dentro *tutti*
+    gli alberi toccati dai tool, apposta, perche' la mappa ne ha bisogno per
+    accendersi (vedi il docstring di `_collect_references` in main.py). Ma la
+    targhetta in chat e l'evidenziazione sulla mappa le decide solo il
+    frontend, filtrando su cosa il testo nomina davvero -- la stessa logica di
+    `citedCodes()` in frontend/src/app/format.ts, duplicata qui perche' l'eval
+    non ha accesso al bundle Angular. Un controllo che guardasse `end["trees"]`
+    direttamente misurerebbe cosa il backend ha consultato, non cosa l'utente
+    vede: esattamente il layer sbagliato per verificare le citazioni.
+    """
+    named = set(re.findall(r"ALB-\d{4}", text))
+    return [tree for tree in end.get("trees", []) if tree["id"] in named]
 
 
 def run_case(case: dict) -> dict:
@@ -125,8 +146,9 @@ def run_case(case: dict) -> dict:
         problems.append(f"nessuna forma di rifiuto riconosciuta fra {alternatives}")
 
     expected_citations = case["expected_citations"]
-    if expected_citations == "trees" and not end.get("trees"):
-        problems.append("nessun albero citato")
+    cited_trees = _cited_trees(end, text)
+    if expected_citations == "trees" and not cited_trees:
+        problems.append("nessun albero citato nel testo (l'interfaccia non mostrerebbe targhette)")
     if expected_citations == "articles" and not end.get("articles"):
         problems.append("nessun articolo citato")
     if expected_citations == "chart":
@@ -134,13 +156,30 @@ def run_case(case: dict) -> dict:
             problems.append("nessun dato per il grafico")
         # Le barre riassumono alberi precisi, e la mappa deve poterli accendere.
         # `cadastre_stats` tornava soli conteggi: il grafico compariva e la
-        # mappa restava spenta, senza che nessun caso se ne accorgesse.
+        # mappa restava spenta, senza che nessun caso se ne accorgesse. Qui si
+        # guarda il payload grezzo apposta: il grafico accende in mappa *tutti*
+        # gli alberi trovati, non solo quelli nominati nel testo (state.ts,
+        # highlightFor: "il grafico vale quanto un codice citato").
         elif not end.get("trees"):
             problems.append("grafico senza gli alberi da evidenziare in mappa")
-    if expected_citations == "none" and (
-        end.get("trees") or end.get("articles") or end.get("chart")
-    ):
-        problems.append("ha citato fonti per una domanda senza risposta nei dati")
+    if expected_citations == "none":
+        # Dire *quali* fonti sono passate: senza, il fallimento costava una
+        # riesecuzione della suite solo per scoprire quale dei tre secchi era
+        # pieno. I nomi non cambiano il giudizio, lo rendono leggibile.
+        leaked = [
+            bucket
+            for bucket, present in (
+                ("trees", bool(cited_trees)),
+                ("articles", bool(end.get("articles"))),
+                ("chart", bool(end.get("chart"))),
+            )
+            if present
+        ]
+        if leaked:
+            problems.append(
+                "ha citato fonti per una domanda senza risposta nei dati: "
+                + ", ".join(leaked)
+            )
 
     # La regola 7 vale in entrambe le direzioni: il grafico deve comparire sulle
     # domande di ripartizione e NON comparire sui conteggi singoli. Senza questo
@@ -155,6 +194,12 @@ def run_case(case: dict) -> dict:
         "problems": problems,
         "tools_used": tools_used,
         "response": text.strip(),
+        # Gli id grezzi dal payload, non solo quelli citati: un fallimento su
+        # "trees" o "none" si rilegge da qui senza dover rifare la chiamata.
+        "trees_in_payload": sorted(t["id"] for t in end.get("trees", [])),
+        "articles_in_payload": sorted(
+            a["reference"] for a in end.get("articles", [])
+        ),
     }
 
 
