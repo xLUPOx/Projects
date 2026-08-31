@@ -132,6 +132,27 @@ def test_stats_sum_to_the_total():
     assert sum(c["count"] for c in s["counts"]) == 140
 
 
+def test_stats_return_the_trees_they_counted():
+    """Il grafico deve poter accendere in mappa cio' che riassume.
+
+    `stats` tornava soli conteggi, quindi una domanda che chiedeva un grafico
+    lasciava la mappa spenta: le barre dicevano 26 alberi e sullo schermo non
+    se ne illuminava nessuno. Gli alberi restituiti devono essere tanti quanti
+    le barre ne contano, in entrambi i rami — altrimenti la mappa contraddice
+    il grafico che le sta accanto.
+    """
+    for kwargs in (
+        {},
+        {"district": "Centro-Piani-Rencio"},
+        {"place_name": "Scuola Primaria Gries", "radius_m": 400},
+    ):
+        s = cadastre.stats("risk_class", **kwargs)
+        assert len(s["trees"]) == s["total"], kwargs
+        assert len(s["trees"]) == sum(c["count"] for c in s["counts"]), kwargs
+        # e sono alberi veri, con un id: e' quello che la mappa evidenzia
+        assert all(t["id"].startswith("ALB-") for t in s["trees"]), kwargs
+
+
 def test_spatial_stats_count_what_the_subtitle_claims():
     """L'invariante di punta del progetto: il grafico conta lo stesso
     sottoinsieme che il testo elenca.

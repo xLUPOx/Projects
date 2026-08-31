@@ -129,7 +129,7 @@ quartiere inesistente.
 la risposta concreta alla parte "AI Champion" del titolo: portare l'AI nei
 processi interni significa prima di tutto poterne misurare le regressioni.
 
-## 6. Demo — quattro domande in difficoltà crescente
+## 6. Demo — cinque domande in difficoltà crescente
 
 1. **Filtro semplice** — "Quanti tigli ci sono nel quartiere Gries?"
    *(mostra: tool calling, conteggio esatto, targhette, evidenziazione in mappa)*
@@ -138,11 +138,16 @@ processi interni significa prima di tutto poterne misurare le regressioni.
    *(mostra: composizione di più filtri, distanza reale, ordinamento)*
 3. **Domanda normativa** — "Ogni quanto va potato un platano secondo il regolamento?"
    *(mostra: RAG, citazione dell'articolo, lettore del testo di legge)*
-4. **Domanda senza risposta** — "Qual è il valore economico stimato degli alberi
+4. **Aggregazione + grafico** — "Plottami gli alberi della zona più centrale
+   della città per categoria a,b,c,d"
+   *(mostra: il quartiere dedotto senza che sia nominato, il grafico disegnato
+   dall'interfaccia e non dal modello, la mappa che illumina gli stessi alberi
+   che le barre contano)*
+5. **Domanda senza risposta** — "Qual è il valore economico stimato degli alberi
    di Oltrisarco?"
    *(mostra: l'agente ammette che il dato non c'è — nessuna citazione, nessuna stima)*
 
-La quarta è la più importante: è quella che dimostra che le prime tre sono
+La quinta è la più importante: è quella che dimostra che le prime quattro sono
 affidabili.
 
 ## 7. Angular

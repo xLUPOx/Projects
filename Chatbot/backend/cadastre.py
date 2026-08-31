@@ -361,6 +361,7 @@ def stats(
             for key, n in counts.most_common()
         ]
         total = near["total_matching"]
+        counted = near["trees"]
     else:
         where, values = _where_clauses(
             district, species, risk_classes, health_status,
@@ -375,6 +376,16 @@ def stats(
         ).fetchall()
         rows = [{"key": r["key"], "count": r["n"]} for r in result]
         total = sum(r["count"] for r in rows)
+        # Gli stessi alberi che le barre contano, non i primi venticinque:
+        # servono ad accendere in mappa cio' che il grafico riassume, e un
+        # grafico che dice 26 sopra una mappa che ne illumina 25 e' peggio di
+        # una mappa spenta.
+        counted = [
+            _row_to_dict(r)
+            for r in _db().execute(
+                "SELECT * FROM trees" + filter_sql, values
+            ).fetchall()
+        ]
 
     return {
         "group_by": group_by,
@@ -385,6 +396,11 @@ def stats(
         ),
         "total": total,
         "counts": rows,
+        # Il grafico e' un'affermazione su alberi precisi: qui ci sono, cosi'
+        # la mappa mostra l'insieme di cui le barre sono il riassunto. Il testo
+        # non li nomina uno per uno, quindi non diventano targhette: la
+        # citazione puntuale e l'evidenziazione d'insieme sono due cose diverse.
+        "trees": counted,
     }
 
 

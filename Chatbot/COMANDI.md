@@ -201,14 +201,19 @@ python eval\run.py
 
 ---
 
-## D. Demo — quattro domande in difficoltà crescente
+## D. Demo — cinque domande in difficoltà crescente
 
 1. Quanti tigli ci sono nel quartiere Gries?
 2. Alberi a rischio moderato o elevato non ispezionati da almeno 24 mesi entro 400 m dalla Scuola Primaria Gries
 3. Ogni quanto va potato un platano secondo il regolamento?
-4. Qual è il valore economico stimato degli alberi di Oltrisarco? — **deve rispondere che il dato non c'è**
+4. Plottami gli alberi della zona più centrale della città per categoria a,b,c,d — **il grafico lo disegna l'interfaccia, e la mappa illumina gli stessi alberi**
+5. Qual è il valore economico stimato degli alberi di Oltrisarco? — **deve rispondere che il dato non c'è**
 
-La quarta è la più importante: è quella che dimostra che le prime tre sono affidabili.
+La quinta è la più importante: è quella che dimostra che le prime quattro sono affidabili.
+
+La quarta è l'unica in cui il modello non riceve un nome di quartiere: «la zona
+più centrale della città» lo obbliga a passare da `allowed_values` per scoprire
+che si chiama Centro-Piani-Rencio. È anche l'unica che esercita il grafico.
 
 **Da provare a mano prima della demo:** una domanda di seguito ("e quelli in
 classe C?") dopo la prima. La conversazione precedente viaggia nel corpo della

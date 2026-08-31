@@ -129,8 +129,14 @@ def run_case(case: dict) -> dict:
         problems.append("nessun albero citato")
     if expected_citations == "articles" and not end.get("articles"):
         problems.append("nessun articolo citato")
-    if expected_citations == "chart" and not end.get("chart"):
-        problems.append("nessun dato per il grafico")
+    if expected_citations == "chart":
+        if not end.get("chart"):
+            problems.append("nessun dato per il grafico")
+        # Le barre riassumono alberi precisi, e la mappa deve poterli accendere.
+        # `cadastre_stats` tornava soli conteggi: il grafico compariva e la
+        # mappa restava spenta, senza che nessun caso se ne accorgesse.
+        elif not end.get("trees"):
+            problems.append("grafico senza gli alberi da evidenziare in mappa")
     if expected_citations == "none" and (
         end.get("trees") or end.get("articles") or end.get("chart")
     ):

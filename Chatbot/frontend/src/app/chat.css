@@ -27,8 +27,10 @@
   letter-spacing: -0.012em;
 }
 
+/* Nessun `max-width`: il pannello e' gia' una colonna stretta, e limitare
+   ulteriormente la misura spezzava il paragrafo in righe corte occupando in
+   altezza lo spazio che avanzava in larghezza. */
 .explainer {
-  max-width: 44ch;
   margin: 0 0 20px;
   color: var(--ink-soft);
   font-size: 14px;
@@ -36,17 +38,16 @@
 
 /* --- scorciatoie: sempre presenti, sopra la casella --- */
 
+/* "Esempi" sta sopra i bottoni, non a fianco: in riga rubava larghezza e
+   lasciava una fascia quasi vuota sopra la casella. */
 .shortcuts {
   display: flex;
+  flex-direction: column;
   border-top: 1px solid var(--rule);
-  align-items: center;
-  gap: 10px;
+  align-items: stretch;
+  gap: 6px;
   padding: 9px 24px 0;
   background: var(--paper-high);
-}
-
-.shortcuts > .eyebrow {
-  flex: none;
 }
 
 .shortcuts ul {

@@ -1,7 +1,7 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { Api } from './api';
 import { citedCodes, segment } from './format';
-import { Article, Message, Place, Step, Tree } from './types';
+import { Article, Chart, Message, Place, Step, Tree } from './types';
 
 /**
  * Stato condiviso fra chat e mappa.
@@ -122,7 +122,9 @@ export class State {
               articles: event.articles,
               chart: event.chart,
             }));
-            this.highlighted.set(highlightFor(this.lastText(), event.trees));
+            this.highlighted.set(
+              highlightFor(this.lastText(), event.trees, event.chart),
+            );
             break;
 
           case 'error':
@@ -167,10 +169,15 @@ export class State {
  * significherebbe dire "guarda qui" indicando esemplari di cui la risposta non
  * afferma niente. Se invece ne cita anche uno solo si accendono tutti quelli
  * trovati, perche' li' l'elenco in chat e' troncato ma la mappa non deve esserlo.
+ *
+ * Il grafico vale quanto un codice citato: le barre sono un'affermazione su un
+ * insieme preciso, solo aggregata invece che nominativa. Senza questa
+ * eccezione una risposta fatta di solo grafico lascerebbe la mappa spenta
+ * proprio quando ha piu' da mostrare.
  */
-function highlightFor(text: string, trees: Tree[]): Set<string> {
-  if (!citedCodes(segment(text)).size) return new Set();
-  return new Set(trees.map((t) => t.id));
+function highlightFor(text: string, trees: Tree[], chart: Chart | null): Set<string> {
+  const asserted = citedCodes(segment(text)).size > 0 || chart !== null;
+  return asserted ? new Set(trees.map((t) => t.id)) : new Set();
 }
 
 function empty(role: 'user' | 'assistant', text: string, pending = false): Message {

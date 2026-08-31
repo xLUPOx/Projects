@@ -30,7 +30,7 @@ export class Chat {
   readonly draft = signal('');
 
   /**
-   * Le quattro domande della demo, in difficolta' crescente.
+   * Le cinque domande della demo, in difficolta' crescente.
    * L'etichetta corta serve a tenerle sempre a portata sopra la casella senza
    * rubare spazio alla conversazione; la domanda intera finisce nella casella.
    */
@@ -47,6 +47,11 @@ export class Chat {
     {
       label: 'Norma di potatura',
       question: 'Ogni quanto va potato un platano secondo il regolamento?',
+    },
+    {
+      label: 'Grafico',
+      question:
+        'Plottami gli alberi della zona più centrale della città per categoria a,b,c,d',
     },
     {
       label: 'Dato che non esiste',

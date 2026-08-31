@@ -61,6 +61,19 @@
     "expected_citations": "chart"
   },
   {
+    "name": "chart_for_implicit_district",
+    "question": "Plottami gli alberi della zona piu' centrale della citta' per categoria a,b,c,d",
+    "expected_tools": [
+      "cadastre_stats"
+    ],
+    "must_contain": [],
+    "must_not_contain": [
+      "```",
+      "|---"
+    ],
+    "expected_citations": "chart"
+  },
+  {
     "name": "pruning_rule",
     "question": "Ogni quanto va potato un platano secondo il regolamento?",
     "expected_tools": [
