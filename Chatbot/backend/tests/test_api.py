@@ -6,8 +6,14 @@ sbagliata li' non rompe nessun import: rompe solo il server, in esecuzione.
 `TestClient` usato come context manager esegue davvero lifespan.
 """
 import os
+import sys
+from pathlib import Path
 
 from fastapi.testclient import TestClient
+
+# I test stanno in backend/tests/, i moduli in backend/: senza questo
+# `import cadastre` non risolve. Stesso accorgimento di eval/run.py.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import main  # importa per primo: e' lui a caricare .env
 
@@ -15,7 +21,10 @@ import main  # importa per primo: e' lui a caricare .env
 # regolamento con gli embedding: cinque chiamate di rete per un test che si
 # dichiara offline. Senza chiave indicizza con BM25 e il ciclo di vita — che e'
 # cio' che questo file verifica — resta esattamente lo stesso.
-os.environ.pop("GEMINI_API_KEY", None)
+# keys.py legge prima GEMINI_API_KEYS: vanno tolte entrambe, altrimenti
+# con un pool in .env questo test "offline" chiamerebbe la rete.
+for _var in ("GEMINI_API_KEYS", "GEMINI_API_KEY"):
+    os.environ.pop(_var, None)
 
 
 def test_lifespan_loads_the_data():

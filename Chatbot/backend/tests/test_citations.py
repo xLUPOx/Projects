@@ -5,8 +5,19 @@ quelli che gli servono. Mostrare fra le fonti anche gli altri rompe il patto su
 cui si regge l'interfaccia — ogni targhetta corrisponde a un'affermazione — e
 una targhetta che non rimanda a niente insegna a non fidarsi neanche delle altre.
 """
+import sys
+from pathlib import Path
+
+# I test stanno in backend/tests/, i moduli in backend/: senza questo
+# `import cadastre` non risolve. Stesso accorgimento di eval/run.py.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 import main
 
+# Non toglie le chiavi dall ambiente come test_api/test_agent: qui non si
+# passa mai da startup(), quindi ne cadastre ne rag vengono inizializzati e
+# nessun client Gemini viene costruito. Se un giorno un test di questo file
+# chiamasse startup(), la chiave andrebbe tolta come fanno gli altri.
 
 def test_recognises_citation_forms():
     text = "Il platano va potato ogni 36 mesi (Art. 10)."

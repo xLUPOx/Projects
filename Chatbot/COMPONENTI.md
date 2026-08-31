@@ -34,9 +34,9 @@ rifarei** in produzione, oppure **è da MVP** e allora cosa cambierei.
   **Giusta a questa scala, e la scala è il criterio:** la forza bruta regge fino
   a qualche decina di migliaia di vettori. Oltre, pgvector — non FAISS: il
   Postgres in produzione c'è già, e un servizio in meno è un servizio in meno.
-- **[eval/](backend/eval/)** — dieci casi, quattro verificano che l'agente
+- **[eval/](backend/eval/)** — undici casi, quattro verificano che l'agente
   **rifiuti**. *Separata dai test unitari,* che girano senza rete con un modello
-  finto ([test_agent.py](backend/test_agent.py)): qui invece si chiama Gemini
+  finto ([test_agent.py](backend/tests/test_agent.py)): qui invece si chiama Gemini
   davvero, un caso morto sul rate limit va marcato `SKIP` e non `FAIL`, e il
   giudizio è per parola intera, non per sottostringa.
   **La separazione la rifarei, la suite è incompleta:** non gira in CI e non

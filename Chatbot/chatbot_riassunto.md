@@ -31,7 +31,7 @@ epoca sono i suoi due parametri (`--seed`, `--epoca`) e finiscono scritti dentro
 il GeoJSON: il primo decide quali alberi escono, la seconda rispetto a quando
 sono datate le ispezioni. La demo è riproducibile e i test asseriscono su numeri
 stabili; i soli tre che dipendono dal seed stanno in `DEMO_FACTS`, in cima a
-`test_cadastre.py`, scritti a mano — se li generasse il seeder, l'asserzione
+`tests/test_cadastre.py`, scritti a mano — se li generasse il seeder, l'asserzione
 confronterebbe il generatore con sé stesso.
 
 ## 2. Catasto — `backend/cadastre.py`
@@ -122,20 +122,20 @@ restano accesi, gli altri sbiadiscono, hover e click viaggiano nei due sensi.
 `chart.ts` disegna barre orizzontali e usa il colore solo dove porta
 informazione: le quattro classi di rischio, che hanno una scala ordinata propria.
 
-## 8. Verifica — `backend/test_*.py` e `backend/eval/`
+## 8. Verifica — `backend/tests/` e `backend/eval/`
 
-Cinquantatré test senza chiamate al modello: catasto (21), ciclo dell'agente
-(12), RAG (6), citazioni (6), quota (5), endpoint (3), più sette sul frontend
-per `segment()`. `test_agent.py` sostituisce solo `generate_content_stream` con
+Sessantasei test senza chiamate al modello: catasto (23), ciclo dell'agente
+(15), quota (13), RAG (6), citazioni (6), endpoint (3), più quattordici sul
+frontend per `segment()` e `citedCodes()`. `test_agent.py` sostituisce solo `generate_content_stream` con
 chunk finti costruiti coi tipi veri dell'SDK: turni, dispatch dei tool, un
 argomento fuori schema che rientra nel contesto come errore correggibile e il
 tetto sui sei giri si verificano offline, senza chiave e senza quota.
 
-`eval/cases.json` è la suite sull'agente vero: dieci casi che dichiarano quali
+`eval/cases.json` è la suite sull'agente vero: undici casi che dichiarano quali
 tool devono essere chiamati, **quali non devono esserlo**, cosa deve comparire
 nella risposta e cosa non deve comparire. Il confronto è per parola intera, non
 per sottostringa — cercare `6` lo trovava dentro `36` e dentro `ALB-0006`, e un
-caso poteva passare per il motivo sbagliato. **Quattro dei dieci verificano che
+caso poteva passare per il motivo sbagliato. **Quattro degli undici verificano che
 l'agente rifiuti:** dato assente, domanda fuori dominio, luogo inesistente,
 quartiere inesistente. Su quei quattro il controllo che porta il peso è
 `expected_citations: "none"` — un rifiuto non può accompagnarsi a delle fonti.
@@ -157,7 +157,7 @@ quartiere inesistente. Su quei quattro il controllo che porta il peso è
    `COSINE_THRESHOLD = 0.55`: due perché le scale di punteggio sono diverse,
    assolute perché normalizzando sul migliore il primo risultato vale sempre 1 e
    il sistema citerebbe comunque l'articolo meno peggio. La soglia BM25 è tarata
-   sui casi di `test_rag.py`: fuori dominio si arriva a 0.0, la peggiore domanda
+   sui casi di `tests/test_rag.py`: fuori dominio si arriva a 0.0, la peggiore domanda
    legittima a 2.2. Limite noto: va ritarata se cambiano corpus, tokenizzatore
    o `k1`/`b`. **E sono asimmetriche nella verifica:** quella tarata dai test è
    la BM25, ma con la chiave configurata gira il ramo a embedding, quindi la

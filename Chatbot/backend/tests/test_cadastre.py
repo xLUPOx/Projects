@@ -1,9 +1,14 @@
 """Smoke test dello strato dati: gira senza API key, senza rete, senza server.
 
-    python test_cadastre.py
+    python tests/test_cadastre.py
 """
 import json
+import sys
 from pathlib import Path
+
+# I test stanno in backend/tests/, i moduli in backend/: senza questo
+# `import cadastre` non risolve. Stesso accorgimento di eval/run.py.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import cadastre
 
@@ -213,7 +218,7 @@ def test_the_eval_expects_the_same_numbers_as_here():
     quale riga del file va aggiornata. Senza, il conteggio sbagliato lo
     scopriresti otto minuti dopo, dentro la suite che consuma quota."""
     cases = json.loads(
-        (Path(__file__).parent / "eval" / "cases.json").read_text(encoding="utf-8")
+        (Path(__file__).resolve().parent.parent / "eval" / "cases.json").read_text(encoding="utf-8")
     )
     simple_count = next(c for c in cases if c["name"] == "simple_count")
     assert simple_count["must_contain"] == [str(DEMO_FACTS["tigli_a_gries"])]

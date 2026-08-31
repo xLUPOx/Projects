@@ -673,7 +673,7 @@ flowchart TB
     L5 --> L6["6 · Errori parlanti<br/>luogo o campo sbagliato →<br/>il modello ritenta correggendosi"]
     L6 --> OUT["🟩 risposta con fonte<br/>oppure ammissione esplicita"]
 
-    OUT --> EVAL["🟨 eval/run.py — 10 casi<br/>4 dei quali verificano che RIFIUTI"]
+    OUT --> EVAL["🟨 eval/run.py — 11 casi<br/>4 dei quali verificano che RIFIUTI"]
 
     classDef ai fill:#e6dcf0,stroke:#5b3f86,stroke-width:1px,color:#241833
     classDef be fill:#dfeae4,stroke:#2e5e4e,stroke-width:1px,color:#182420
@@ -686,9 +686,9 @@ flowchart TB
     class EVAL dt
 ```
 
-La quarta domanda della demo — *"qual è il valore economico degli alberi di
-Oltrisarco?"* — è la più importante: è quella che dimostra che le prime tre sono
-affidabili.
+La quinta domanda della demo — *"qual è il valore economico degli alberi di
+Oltrisarco?"* — è la più importante: è quella che dimostra che le prime quattro
+sono affidabili.
 
 ---
 
@@ -698,17 +698,17 @@ affidabili.
 flowchart LR
     subgraph OFF["🟩 offline — nessuna rete, deterministici"]
         direction TB
-        T1["test_cadastre.py — 22<br/>filtri, geometria, soglia mesi,<br/>invariante del bounding box"]
-        T2["test_rag.py — 6<br/>chunking, recupero, fuori dominio"]
-        T3["test_citations.py — 6<br/>quali fonti finiscono in interfaccia"]
-        T4["test_quota.py — 13<br/>429 al minuto vs giornaliero,<br/>rotazione delle chiavi"]
-        T5["test_api.py — 3<br/>lifespan, endpoint,<br/>proprietà del GeoJSON"]
-        T6["test_agent.py — 15<br/>turni, dispatch dei tool, errori,<br/>tetto sui giri — modello finto"]
-        T7["format.spec.ts — 7<br/>targhette ALB- e Art.,<br/>recinti di codice"]
+        T1["tests/test_cadastre.py — 23<br/>filtri, geometria, soglia mesi,<br/>invariante del bounding box"]
+        T2["tests/test_rag.py — 6<br/>chunking, recupero, fuori dominio"]
+        T3["tests/test_citations.py — 6<br/>quali fonti finiscono in interfaccia"]
+        T4["tests/test_quota.py — 13<br/>429 al minuto vs giornaliero,<br/>rotazione delle chiavi"]
+        T5["tests/test_api.py — 3<br/>lifespan, endpoint,<br/>proprietà del GeoJSON"]
+        T6["tests/test_agent.py — 15<br/>turni, dispatch dei tool, errori,<br/>tetto sui giri — modello finto"]
+        T7["format.spec.ts — 14<br/>targhette ALB- e Art.,<br/>recinti di codice"]
     end
 
     subgraph ON["🟪 usa davvero il modello"]
-        EV["eval/run.py — 10 casi<br/>tool attesi, contenuto,<br/>tipo di citazione"]
+        EV["eval/run.py — 11 casi<br/>tool attesi, contenuto,<br/>tipo di citazione"]
     end
 
     subgraph GAP["🟥 scoperto"]

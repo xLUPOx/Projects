@@ -6,11 +6,21 @@ report della suite eval accusa il prompt di un problema che sta nella quota.
 Gemini manda un `retryDelay` in *entrambi* i casi, quindi il campo da guardare
 e' il `quotaId`.
 """
+import sys
 import time
+from pathlib import Path
+
+# I test stanno in backend/tests/, i moduli in backend/: senza questo
+# `import cadastre` non risolve. Stesso accorgimento di eval/run.py.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import keys
 import main
 
+# Non toglie le chiavi dall ambiente come test_api/test_agent: qui non si
+# passa mai da startup(), quindi ne cadastre ne rag vengono inizializzati e
+# nessun client Gemini viene costruito. Se un giorno un test di questo file
+# chiamasse startup(), la chiave andrebbe tolta come fanno gli altri.
 PER_MINUTE = (
     "429 RESOURCE_EXHAUSTED ... 'quotaId': "
     "'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', "

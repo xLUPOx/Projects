@@ -12,9 +12,15 @@ catasto, il RAG, il filtro sulle citazioni) e' quello di produzione.
 """
 import json
 import os
+import sys
+from pathlib import Path
 from typing import Any
 
 from google.genai import errors, types
+
+# I test stanno in backend/tests/, i moduli in backend/: senza questo
+# `import cadastre` non risolve. Stesso accorgimento di eval/run.py.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import main  # importa per primo: e' lui a caricare .env
 
@@ -22,7 +28,10 @@ import main  # importa per primo: e' lui a caricare .env
 # nemmeno l'avvio tocca la rete. Va fatto dopo l'import di main (che legge .env)
 # e prima di inizializzare il RAG, perche' initialize() e' idempotente e la
 # modalita' si decide li' una volta sola.
-os.environ.pop("GEMINI_API_KEY", None)
+# keys.py legge prima GEMINI_API_KEYS: vanno tolte entrambe, altrimenti
+# con un pool in .env questo test "offline" chiamerebbe la rete.
+for _var in ("GEMINI_API_KEYS", "GEMINI_API_KEY"):
+    os.environ.pop(_var, None)
 
 import cadastre  # noqa: E402
 import rag  # noqa: E402

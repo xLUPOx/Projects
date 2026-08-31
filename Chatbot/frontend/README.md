@@ -1,6 +1,10 @@
-# FrontendVerde
+# frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.35.
+Interfaccia dell'assistente del catasto del verde: chat, mappa Leaflet e
+grafico. Contesto e scelte progettuali in [PROGETTO.md](../PROGETTO.md),
+avvio e test in [COMANDI.md](../COMANDI.md).
+
+Il resto di questo file e' la guida generata da [Angular CLI](https://github.com/angular/angular-cli) 20.3.35.
 
 ## Development server
 

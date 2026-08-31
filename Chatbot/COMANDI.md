@@ -50,7 +50,7 @@ Seed ed epoca finiscono dentro il GeoJSON: il primo decide *quali* alberi
 escono, la seconda *rispetto a quando* sono datate le ispezioni, e il catasto
 rilegge quest'ultima come "oggi" invece di usare la data di sistema.
 Cambiandoli vanno riscritti i tre conteggi in `DEMO_FACTS`, in cima a
-`backend/test_cadastre.py`: sono l'unico posto in cui stanno, e i test dicono
+`backend/tests/test_cadastre.py`: sono l'unico posto in cui stanno, e i test dicono
 esattamente quali.
 
 ### Frontend
@@ -154,26 +154,43 @@ http://localhost:4200/
 
 ## C. Test
 
-Offline, senza API key, deterministici — sessantaquattro in tutto:
+Stanno in `backend/tests/`. Offline, senza API key, deterministici —
+sessantasei in tutto:
 
 ```powershell
 cd backend
-python test_cadastre.py     # 22 - catasto, query spaziali, statistiche
-python test_agent.py        # 15 - ciclo dell'agente con un modello finto
-python test_quota.py        # 12 - 429, e rotazione fra più chiavi
-python test_rag.py          #  6 - chunking, recupero, soglia
-python test_citations.py    #  6 - in "Fonti" solo cio' che e' citato
-python test_api.py          #  3 - endpoint e lifespan
+python tests\test_cadastre.py     # 23 - catasto, query spaziali, statistiche
+python tests\test_agent.py        # 15 - ciclo dell'agente con un modello finto
+python tests\test_quota.py        # 13 - 429, e rotazione fra più chiavi
+python tests\test_rag.py          #  6 - chunking, recupero, soglia
+python tests\test_citations.py    #  6 - in "Fonti" solo cio' che e' citato
+python tests\test_api.py          #  3 - endpoint e lifespan
 ```
+
+Ognuno ha il suo `__main__` e si lancia da solo. In alternativa, tutti insieme:
+
+```powershell
+python -m pytest tests -q
+```
+
+I moduli stanno in `backend/`, i test in `backend/tests/`: ogni file aggiunge la
+cartella padre a `sys.path` in testa, come fa già `eval/run.py`. Per questo
+girano sia lanciati singolarmente sia sotto pytest, da `backend/` o da `tests/`.
 
 `test_agent.py` sostituisce solo `generate_content_stream` con chunk finti:
 turni, dispatch dei tool, errori che rientrano nel contesto e tetto sui giri
 sono verificati senza chiave e senza rete.
 
-`test_rag.py` gira in modalità BM25 (rimuove la `GEMINI_API_KEY`): copre il
-chunking, il recupero e la soglia lessicale, non il ramo con gli embedding.
+`test_rag.py` gira in modalità BM25: copre il chunking, il recupero e la soglia
+lessicale, non il ramo con gli embedding.
 
-Frontend — sette test su `segment()`, l'unico punto con logica propria:
+Chi toglie la chiave dall'ambiente (`test_rag`, `test_api`, `test_agent`) toglie
+**sia `GEMINI_API_KEYS` sia `GEMINI_API_KEY`**: `keys.py` legge per prima la
+plurale, quindi cancellare solo la singola lasciava questi test — che si
+dichiarano offline — indicizzare il regolamento con gli embedding, cioè in rete.
+
+Frontend — quattordici test in `format.spec.ts`, l'unico punto con logica
+propria: dieci su `segment()` e quattro su `citedCodes()`:
 
 ```powershell
 cd frontend
@@ -187,7 +204,7 @@ python eval\run.py                 # tutti i casi
 python eval\run.py rule            # solo i casi il cui nome contiene "rule"
 ```
 
-Senza `GEMINI_API_KEY` si ferma subito invece di far fallire dieci casi con
+Senza `GEMINI_API_KEY` si ferma subito invece di far fallire undici casi con
 lo stesso errore.
 
 Il free tier concede 5 richieste al minuto e ogni caso ne consuma 2-3: fra un

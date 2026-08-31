@@ -54,12 +54,13 @@ chatbot/
 │   ├── tools.py                i 5 tool esposti al modello
 │   ├── keys.py                 il pool delle chiavi Gemini: pausa vs esaurimento
 │   ├── main.py                 FastAPI, /api/chat in streaming SSE
-│   ├── test_cadastre.py        22 test, nessuna rete
-│   ├── test_agent.py           15 test: il ciclo dell'agente, con un modello finto
-│   ├── test_quota.py           13 test: 429 al minuto vs giornaliero, rotazione chiavi
-│   ├── test_rag.py             6 test, nessuna rete
-│   ├── test_citations.py       6 test: quali fonti finiscono in interfaccia
-│   ├── test_api.py             3 test: lifespan ed endpoint di lettura
+│   ├── tests/                  66 test offline, nessuna rete
+│   │   ├── test_cadastre.py    23: catasto, query spaziali, statistiche
+│   │   ├── test_agent.py       15: il ciclo dell'agente, con un modello finto
+│   │   ├── test_quota.py       13: 429 al minuto vs giornaliero, rotazione chiavi
+│   │   ├── test_rag.py          6: chunking, recupero, soglia
+│   │   ├── test_citations.py    6: quali fonti finiscono in interfaccia
+│   │   └── test_api.py          3: lifespan ed endpoint di lettura
 │   └── eval/                   suite di regressione sull'agente (usa il modello)
 └── frontend/             Angular 20, standalone + signals, Leaflet
     └── src/app/
@@ -69,7 +70,9 @@ chatbot/
         ├── chip.ts             l'elemento firma: la citazione cliccabile
         ├── chat.ts/.html/.css  conversazione, passi dell'agente, fonti
         ├── map.ts              Leaflet, evidenziazione bidirezionale
-        └── chart.ts            barre orizzontali di sintesi
+        ├── chart.ts            barre orizzontali di sintesi
+        ├── types.ts            i contratti condivisi col backend
+        └── format.spec.ts      14 test: segment() e citedCodes()
 ```
 
 ## 4. Le decisioni che vale la pena spiegare al colloquio
@@ -119,7 +122,7 @@ non cambierebbe: PROJ, sotto PostGIS, porta lo stesso algoritmo di Karney.
 
 ## 5. Il 25% interno
 
-`backend/eval/` è la suite di regressione sull'agente: tredici casi che dichiarano
+`backend/eval/` è la suite di regressione sull'agente: undici casi che dichiarano
 quali tool devono essere chiamati, cosa deve comparire nella risposta, cosa non
 deve comparire, e che tipo di citazione deve tornare. Quattro casi verificano che
 l'agente **rifiuti**: dato assente, domanda fuori dominio, luogo inesistente,

@@ -1,7 +1,16 @@
 """Test del retriever. Girano in modalita' BM25 (nessuna API key richiesta)."""
 import os
+import sys
+from pathlib import Path
 
-os.environ.pop("GEMINI_API_KEY", None)  # forza il retriever lessicale
+# I test stanno in backend/tests/, i moduli in backend/: senza questo
+# `import cadastre` non risolve. Stesso accorgimento di eval/run.py.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+# keys.py legge prima GEMINI_API_KEYS: vanno tolte entrambe, altrimenti
+# con un pool in .env il retriever userebbe gli embedding e la rete.
+for _var in ("GEMINI_API_KEYS", "GEMINI_API_KEY"):
+    os.environ.pop(_var, None)
 
 import rag  # noqa: E402
 
