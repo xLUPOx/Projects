@@ -116,11 +116,11 @@ def test_tool_call_is_executed_and_announced_before_the_result():
     assert status["name"] == "search_trees"
     assert status["args"] == {"district": "Gries", "species": "tiglio"}
     assert status["text"] == "Interrogo il catasto alberi"
-    tigli = DEMO_FACTS["tigli_a_gries"]
-    assert tool["result"] == f"{tigli} alberi corrispondenti"  # il tool ha girato davvero
+    linden_count = DEMO_FACTS["tigli_a_gries"]
+    assert tool["result"] == f"{linden_count} alberi corrispondenti"  # il tool ha girato davvero
 
     assert events[-1]["tools_used"] == ["search_trees"]
-    assert len(events[-1]["trees"]) == tigli
+    assert len(events[-1]["trees"]) == linden_count
 
     # e l'esito e' rientrato nel contesto per il giro dopo
     assert len(client.models.calls) == 2
@@ -132,7 +132,9 @@ def test_bad_arguments_come_back_as_a_correctable_error():
     """Un argomento fuori schema non deve rompere lo stream: torna al modello
     come risultato del tool, che nella maggior parte dei casi si corregge."""
     events, client = _run([
-        [_chunk(_call("search_trees", quartiere="Gries"))],  # nome inventato
+        # `quartiere` e' italiano apposta: e' il nome che il modello si inventa
+        # al posto di `district`, ed e' proprio quello che il test verifica.
+        [_chunk(_call("search_trees", quartiere="Gries"))],
         [_chunk(_text("Riprovo."))],
     ])
 
@@ -247,31 +249,31 @@ def _run_with_pool(clients: dict, question="domanda"):
 def test_a_key_out_of_daily_quota_hands_over_to_the_next():
     """Il limite giornaliero non passa aspettando: la chiave esce dal giro e
     la domanda la serve la successiva, nello stesso stream."""
-    bruciata = ExhaustedClient("GenerateRequestsPerDayPerProjectPerModel-FreeTier")
-    buona = FakeClient([[_chunk(_text("Sei tigli."))]])
+    burnt = ExhaustedClient("GenerateRequestsPerDayPerProjectPerModel-FreeTier")
+    healthy = FakeClient([[_chunk(_text("Sei tigli."))]])
 
-    events = _run_with_pool({"k1": bruciata, "k2": buona})
+    events = _run_with_pool({"k1": burnt, "k2": healthy})
 
     assert _types(events) == ["text", "end"]
-    assert bruciata.models.calls == 1  # provata una volta sola, poi da parte
-    assert buona.models.calls[0]["contents"][-1].parts[0].text == "domanda"
+    assert burnt.models.calls == 1  # provata una volta sola, poi da parte
+    assert healthy.models.calls[0]["contents"][-1].parts[0].text == "domanda"
 
 
 def test_the_minute_limit_changes_key_instead_of_sleeping():
     """Con piu' chiavi, aspettare 31 secondi e' uno spreco: la pausa serve solo
     quando sono al limite tutte quante."""
-    in_pausa = ExhaustedClient("GenerateRequestsPerMinutePerProjectPerModel-FreeTier")
-    buona = FakeClient([[_chunk(_text("ok"))]])
+    paused = ExhaustedClient("GenerateRequestsPerMinutePerProjectPerModel-FreeTier")
+    healthy = FakeClient([[_chunk(_text("ok"))]])
 
-    def vietato(_seconds):
+    def forbid_sleep(_seconds):
         raise AssertionError("ha dormito invece di cambiare chiave")
 
-    dormita = main.time.sleep
-    main.time.sleep = vietato
+    real_sleep = main.time.sleep
+    main.time.sleep = forbid_sleep
     try:
-        events = _run_with_pool({"k1": in_pausa, "k2": buona})
+        events = _run_with_pool({"k1": paused, "k2": healthy})
     finally:
-        main.time.sleep = dormita
+        main.time.sleep = real_sleep
 
     assert _types(events) == ["text", "end"]
 

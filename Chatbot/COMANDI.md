@@ -43,7 +43,7 @@ Genera il catasto alberi finto (stessi parametri, stesso file):
 
 ```powershell
 python backend\seed_data.py
-python backend\seed_data.py --seed 42 --epoca 2027-01-15   # un altro catasto
+python backend\seed_data.py --seed 42 --epoch 2027-01-15   # un altro catasto
 ```
 
 Seed ed epoca finiscono dentro il GeoJSON: il primo decide *quali* alberi

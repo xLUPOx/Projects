@@ -129,8 +129,8 @@ def test_an_exhausted_key_is_tried_again_later():
     keys.mark_exhausted("a")
     assert keys.usable() is None
 
-    dopo = time.monotonic() + keys.EXHAUSTED_RETRY_S + 1
-    assert keys.usable(now=dopo) == "a"
+    later = time.monotonic() + keys.EXHAUSTED_RETRY_S + 1
+    assert keys.usable(now=later) == "a"
     # ma nel frattempo non si aspetta: si risonda alla domanda dopo
     assert keys.wait_time() is None
 

@@ -18,12 +18,12 @@ import cadastre
 # volta: cambiare seed non li tocca.
 #
 # Vanno riscritti a mano, guardando i dati, quando si cambia `--seed` o
-# `--epoca` in seed_data.py. Non li genera il seeder di proposito: se li
+# `--epoch` in seed_data.py. Non li genera il seeder di proposito: se li
 # scrivesse lui, l'asserzione confronterebbe il generatore con se' stesso e non
 # verificherebbe piu' niente. Sono tre apposta, e questo e' l'unico posto in cui
 # stanno scritti — test_agent.py e la suite eval li rileggono da qui.
 DEMO_FACTS = {
-    "epoca": "2026-08-26",
+    "epoch": "2026-08-26",
     "tigli_a_gries": 6,
     "classe_d_da_24_mesi": 4,
 }
@@ -230,14 +230,14 @@ def test_elapsed_months_do_not_drift_with_the_calendar():
     contati con `date.today()` e scivolavano da soli col passare dei mesi."""
     from datetime import date
 
-    assert cadastre.reference_date() == date.fromisoformat(DEMO_FACTS["epoca"])
+    assert cadastre.reference_date() == date.fromisoformat(DEMO_FACTS["epoch"])
     tree = cadastre.search(limit=1)["trees"][0]
     expected = cadastre._months_elapsed(tree["last_inspection"])
     assert tree["months_since_inspection"] == expected
 
     # e la soglia SQL guarda la stessa data
-    epoca = date.fromisoformat(DEMO_FACTS["epoca"])
-    assert cadastre._cutoff_date(24) == epoca.replace(year=epoca.year - 2).isoformat()
+    epoch = date.fromisoformat(DEMO_FACTS["epoch"])
+    assert cadastre._cutoff_date(24) == epoch.replace(year=epoch.year - 2).isoformat()
 
 
 def test_non_groupable_field():

@@ -27,7 +27,7 @@ grafico, RAG sul regolamento. Sotto, gli otto blocchi in cui la repo le realizza
 `data/regolamento_verde.md` (undici articoli, il corpus del RAG).
 `backend/seed_data.py` genera il catasto: `generate_trees()` estrae quartiere,
 specie, classe di propensione al cedimento, stato fitosanitario e date. Seed ed
-epoca sono i suoi due parametri (`--seed`, `--epoca`) e finiscono scritti dentro
+epoca sono i suoi due parametri (`--seed`, `--epoch`) e finiscono scritti dentro
 il GeoJSON: il primo decide quali alberi escono, la seconda rispetto a quando
 sono datate le ispezioni. La demo è riproducibile e i test asseriscono su numeri
 stabili; i soli tre che dipendono dal seed stanno in `DEMO_FACTS`, in cima a

@@ -10,11 +10,8 @@ questi campi (tutti facoltativi tranne question ed expected_citations):
     must_not_contain   parole che non devono esserci
     must_contain_any   almeno una di queste: serve ai rifiuti, che hanno una
                        forma precisa ma molte formulazioni
-    expected_citations trees | articles | chart | none — verifica cosa
-                       l'interfaccia mostrerebbe come fonte, non il payload
-                       grezzo: un albero conta solo se il suo codice ALB-xxxx
-                       compare nel testo (vedi _cited_trees), esattamente come
-                       fa citedCodes() in frontend/src/app/format.ts
+    expected_citations trees | articles | chart | none: cosa l'interfaccia
+                       mostrerebbe come fonte, non il payload — vedi _cited_trees
     chart_forbidden    vero se la domanda non deve produrre un grafico
 
 Il confronto e' per parola intera, non per sottostringa: vedi _mentions.
@@ -69,13 +66,36 @@ def _cited_trees(end: dict, text: str) -> list[dict]:
     accendersi (vedi il docstring di `_collect_references` in main.py). Ma la
     targhetta in chat e l'evidenziazione sulla mappa le decide solo il
     frontend, filtrando su cosa il testo nomina davvero -- la stessa logica di
-    `citedCodes()` in frontend/src/app/format.ts, duplicata qui perche' l'eval
-    non ha accesso al bundle Angular. Un controllo che guardasse `end["trees"]`
+    `segment()` + `citedCodes()` in frontend/src/app/format.ts, rifatta qui in
+    `_named_codes` perche' l'eval non ha accesso al bundle Angular: e' una
+    regola duplicata in due linguaggi, ed e' il punto da riallineare se le
+    targhette cambiano forma. Un controllo che guardasse `end["trees"]`
     direttamente misurerebbe cosa il backend ha consultato, non cosa l'utente
     vede: esattamente il layer sbagliato per verificare le citazioni.
     """
-    named = set(re.findall(r"ALB-\d{4}", text))
-    return [tree for tree in end.get("trees", []) if tree["id"] in named]
+    return [tree for tree in end.get("trees", []) if tree["id"] in _named_codes(text)]
+
+
+def _named_codes(text: str) -> set[str]:
+    """I codici ALB-xxxx che il frontend trasformerebbe in targhetta.
+
+    Le righe dentro un recinto ``` non contano: `segment()` le rende a
+    spaziatura fissa senza interpretarle, quindi un codice li' dentro non
+    diventa targhetta e non accende niente in mappa. La regola 8 del prompt
+    vieta al modello i blocchi di codice proprio per questo, ma un controllo
+    che li ignorasse darebbe per citato un albero che l'utente non vede
+    cliccabile — cioe' sbaglierebbe verdetto esattamente nel caso in cui il
+    modello ha disobbedito.
+    """
+    codes: set[str] = set()
+    fenced = False
+    for line in text.split("\n"):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+            continue
+        if not fenced:
+            codes.update(re.findall(r"ALB-\d{4}", line))
+    return codes
 
 
 def run_case(case: dict) -> dict:

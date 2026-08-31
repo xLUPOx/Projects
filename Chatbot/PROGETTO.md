@@ -48,7 +48,7 @@ chatbot/
 │   ├── places.json             6 punti di riferimento (scuole, parco, ospedale)
 │   └── regolamento_verde.md    11 articoli, il corpus del RAG
 ├── backend/
-│   ├── seed_data.py            genera il catasto (--seed e --epoca finiscono nel dato)
+│   ├── seed_data.py            genera il catasto (--seed e --epoch finiscono nel dato)
 │   ├── cadastre.py             SQLite in memoria + geodetica WGS-84 per lo spaziale
 │   ├── rag.py                  embedding Gemini + numpy, fallback BM25 Okapi
 │   ├── tools.py                i 5 tool esposti al modello

@@ -1,14 +1,14 @@
 """Genera il catasto alberi finto (GeoJSON) usato come sorgente dati della demo.
 
     python seed_data.py                              # come la demo
-    python seed_data.py --seed 42 --epoca 2027-01-15
+    python seed_data.py --seed 42 --epoch 2027-01-15
 
 L'output e' deterministico: stessi parametri, stesso file. Sono due parametri e
 non uno solo perche' governano cose diverse, e conviene poterli muovere
 separatamente:
 
     seed   quali alberi escono (specie, quartiere, classe, stato)
-    epoca  rispetto a quando sono datate le ispezioni
+    epoch  rispetto a quando sono datate le ispezioni
 
 Finiscono entrambi dentro il GeoJSON: il dato dichiara come e' stato prodotto, e
 `cadastre.reference_date()` rilegge l'epoca invece di usare `date.today()`.
@@ -158,8 +158,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED,
                         help=f"quali alberi escono (default {DEFAULT_SEED})")
-    parser.add_argument("--epoca", type=date.fromisoformat, default=DEFAULT_EPOCH,
+    parser.add_argument("--epoch", type=date.fromisoformat, default=DEFAULT_EPOCH,
                         metavar="AAAA-MM-GG",
                         help=f"data rispetto a cui datare le ispezioni (default {DEFAULT_EPOCH})")
     arguments = parser.parse_args()
-    main(seed=arguments.seed, epoch=arguments.epoca)
+    main(seed=arguments.seed, epoch=arguments.epoch)
