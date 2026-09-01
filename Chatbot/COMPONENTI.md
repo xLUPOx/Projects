@@ -72,3 +72,27 @@ rifarei** in produzione, oppure **è da MVP** e allora cosa cambierei.
 - **[chip.ts](frontend/src/app/chip.ts)** — la targhetta cliccabile.
   Nessuna alternativa da scartare: è l'elemento firma. Una frase senza
   targhetta non ha fonte.
+
+## Dipendenze esterne — a cosa servono
+
+- **fastapi** — framework web, definisce gli endpoint.
+- **fastapi.middleware.cors** — permette al frontend (4200) di chiamare il backend (8000).
+- **fastapi.responses.StreamingResponse** — manda la risposta a pezzi invece che tutta insieme.
+- **fastapi.testclient** — chiama gli endpoint nei test senza un server acceso davvero.
+- **pydantic.BaseModel** — valida forma e tipi delle richieste JSON in arrivo.
+- **google.genai** — SDK ufficiale per parlare con Gemini.
+- **google.genai.types / errors** — i tipi di dato (Content, Part, FunctionCall) e gli errori dell'SDK.
+- **dotenv.load_dotenv** — legge la chiave API dal file `.env`.
+- **numpy** — calcolo vettoriale, il coseno fra embedding nel RAG.
+- **rank_bm25.BM25Okapi** — motore di ricerca testuale, fallback quando manca la chiave.
+- **snowballstemmer** — riduce le parole alla radice per il matching testuale.
+- **geographiclib.Geodesic** — distanza reale sull'ellissoide, non in linea d'aria approssimata.
+- **dateutil.relativedelta** — differenze di mesi/anni fra date, calcolate correttamente.
+- **sqlite3** — il database in memoria del catasto.
+- **difflib** — corrispondenze approssimate, tollera un refuso nel nome di un luogo.
+- **contextlib.asynccontextmanager** — gestisce avvio e spegnimento dell'app (`lifespan`).
+- **typing** (`Any`, `Iterator`, `AsyncIterator`) — solo annotazioni di tipo, zero effetto a runtime.
+- **collections.Counter** — conta occorrenze, usato per raggruppare negli aggregati.
+- **pathlib.Path** — percorsi di file indipendenti dal sistema operativo.
+- **datetime / date / timedelta** — gestione di date e durate.
+- **json, re, os, sys, time, math, random, logging, argparse** — libreria standard: parsing JSON, regex, ambiente, percorsi, tempo, matematica, seed, log, argomenti da riga di comando.
