@@ -1,0 +1,6 @@
+fastapi==0.118.0
+pydantic==2.11.7
+uvicorn==0.37.0
+# Pinned with ==, not >=: language_detection_pipeline.pkl was produced with 1.6.0 and
+# loading it with another version emits InconsistentVersionWarning.
+scikit-learn==1.6.0
