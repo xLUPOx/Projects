@@ -1,6 +1,6 @@
 # Assistente del catasto del verde — riassunto
 
-**Struttura:** `backend/` (Python) e `frontend/` (Angular).
+**Struttura:** `backend/` (Python) e `frontend/` (Angular). Completly Vibecoded.
 
 **Caso:** R3GIS, Bolzano. Un tecnico dell'ufficio verde deve sapere quali alberi
 sono a rischio, dove sono e cosa prescrive il regolamento, senza imparare una
