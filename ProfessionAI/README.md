@@ -1,6 +1,6 @@
 # ProfessionAI — progetti del percorso
 
-Sei progetti consegnati durante il master ProfessionAI, dal Python di base al deploy di un
+Sette progetti consegnati durante il master ProfessionAI, dal Python di base al deploy di un
 servizio in produzione. Ogni cartella contiene **il progetto** e **il suo riassunto**: il riassunto
 è il posto da cui partire, perché spiega le scelte e i limiti che il codice da solo non dichiara.
 
@@ -12,6 +12,7 @@ servizio in produzione. Ogni cartella contiene **il progetto** e **il suo riassu
 | 02-D | [Identificazione della lingua di testi museali](<02 - D - Un modello per l'identificazione della lingua di testi per un museo>) | scikit-learn, TF-IDF | distingue italiano, inglese e tedesco su didascalie brevi |
 | 03-D | [API di riconoscimento della lingua](<03 - D - API riconoscimento lingua museo>) | FastAPI, Pydantic, Vercel | espone il modello 02-D come servizio HTTP in produzione |
 | 04-D | [Analisi delle vendite di un e-commerce](<04 - D - Analisi delle vendite di un sito di e-commerce>) | SQL, SQLite | risponde con query a quattro domande di business |
+| 06-D | [Sincronizzazione file con multiprocessing e multithreading](<06 - D - Sistema di sincronizzazione file con multiprocessing e multithreading>) | Python, `concurrent.futures` | rende una cartella di backup copia coerente della sorgente, e misura quanto rendono thread e processi |
 
 ---
 
@@ -69,6 +70,16 @@ unità, quindi la classifica per fatturato coincide con il listino prezzi e non 
 preferenze dei clienti. Riconoscere un risultato degenere e dichiararlo vale più che presentarlo
 come una scoperta.
 
+**06-D — Sincronizzazione file.** Il parallelismo si sceglie sul tipo di attesa, non per
+principio: **processi** per il lavoro dell'interprete, perché il GIL lascia girare un thread alla
+volta; **thread** per le attese di I/O, che il GIL non blocca. Poi la misura ha smentito metà
+delle scelte — su disco locale l'elenco dei file, sequenziale, pesa tre quarti del confronto
+(Amdahl), e i processi con dieci file costano più del lavoro stesso — e il punto è stato
+dichiararlo invece di nasconderlo, e trovare con un esperimento (una latenza simulata di 2 ms per
+scrittura) **dove** i thread rendono davvero: lì sono 6 volte più veloci. Sul piano della
+robustezza, due regole opposte: l'errore su un file si raccoglie e si prosegue, una sorgente
+inesistente ferma tutto, perché `os.walk` la leggerebbe come vuota e svuoterebbe il backup.
+
 ---
 
 ## Note pratiche
@@ -83,6 +94,10 @@ interattiva. La pagina servita su `/` elenca gli endpoint e mostra come chiamarl
 **Il progetto 04-D** è scritto per SQLite, motore che la traccia non imponeva: è quello su cui le
 query sono state eseguite davvero, e i risultati riportati sotto ognuna vengono da lì. Le
 istruzioni per rieseguirlo stanno in testa al file.
+
+**Il progetto 06-D** è un notebook pensato per Google Colab, che genera da sé le cartelle di prova
+in una directory temporanea. I processi partono con `fork`, quindi va eseguito su Linux o macOS:
+su Windows esiste solo `spawn`, e il motore andrebbe prima spostato in un modulo `.py`.
 
 **Lingua.** I documenti e i commenti sono in italiano; identificatori, docstring e titoli dei
 grafici sono in inglese.
